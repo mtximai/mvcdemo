@@ -1,0 +1,28 @@
+INFO  2017-04-17 11:45:09,014  1345ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-04-17 11:45:30,938 23269ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-04-17 11:45:32,788 25119ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-04-17 11:45:33,272 25603ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-04-17 11:45:35,124 27455ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessarGet, ActionParameters:Parameter: pSel - value: ;Parameter: pTipo - value: ;
+ERROR 2017-04-17 11:45:46,636 38967ms Log4NetConfig          OnException        - OnException - Controller:MvcDemo.HomeController
+System.InvalidOperationException: Esta solicitação foi bloqueada porque informações confidenciais não podem ser enviadas para sites da Web de terceiros quando usada em uma solicitação GET. Para permitir solicitações GET, configure JsonRequestBehavior como AllowGet.
+   em System.Web.Mvc.JsonResult.ExecuteResult(ControllerContext context)
+   em System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   em System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   em System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   em System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+INFO  2017-04-17 11:45:58,356 50687ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessarGet, ActionParameters:Parameter: pSel - value: ;Parameter: pTipo - value: ;
+ERROR 2017-04-17 11:46:03,394 55725ms Log4NetConfig          OnException        - OnException - Controller:MvcDemo.HomeController
+System.InvalidOperationException: Esta solicitação foi bloqueada porque informações confidenciais não podem ser enviadas para sites da Web de terceiros quando usada em uma solicitação GET. Para permitir solicitações GET, configure JsonRequestBehavior como AllowGet.
+   em System.Web.Mvc.JsonResult.ExecuteResult(ControllerContext context)
+   em System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   em System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   em System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   em System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+INFO  2017-04-17 11:47:57,948   779ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-04-17 11:48:10,941 13772ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-04-17 11:48:11,287 14118ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-04-17 11:48:12,755 15586ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessarGet, ActionParameters:Parameter: pSel - value: ;Parameter: pTipo - value: ;

@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FinModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CadAcao">
+    <Key>
+      <PropertyRef Name="id_acao" />
+    </Key>
+    <Property Name="id_acao" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="nome_resumido" Type="varchar" MaxLength="12" />
+    <Property Name="obs_especificacao" Type="varchar" MaxLength="10" />
+    <Property Name="num_fatorcot" Type="int" Nullable="false" />
+    <Property Name="num_lotepdr" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CadConta">
+    <Key>
+      <PropertyRef Name="id_conta" />
+    </Key>
+    <Property Name="id_conta" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="descr" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="ind_tipo" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="ind_natureza" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CadCotaHist">
+    <Key>
+      <PropertyRef Name="id_Acao" />
+      <PropertyRef Name="dt_Pregao" />
+    </Key>
+    <Property Name="id_Acao" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="dt_Pregao" Type="smalldatetime" Nullable="false" />
+    <Property Name="vl_Abertura" Type="money" Nullable="false" />
+    <Property Name="vl_Maximo" Type="money" Nullable="false" />
+    <Property Name="vl_Minimo" Type="money" Nullable="false" />
+    <Property Name="vl_Medio" Type="money" Nullable="false" />
+    <Property Name="vl_Ultimo" Type="money" Nullable="false" />
+    <Property Name="qt_Negocio" Type="int" Nullable="false" />
+    <Property Name="num_FatCot" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CadIndice">
+    <Key>
+      <PropertyRef Name="id_indice" />
+      <PropertyRef Name="dt_pregao" />
+    </Key>
+    <Property Name="id_indice" Type="tinyint" Nullable="false" />
+    <Property Name="dt_pregao" Type="smalldatetime" Nullable="false" />
+    <Property Name="qt_ponto" Type="smallmoney" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CadParametro">
+    <Key>
+      <PropertyRef Name="id_Parametro" />
+    </Key>
+    <Property Name="id_Parametro" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="descr" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="vl_str" Type="varchar" MaxLength="10" />
+    <Property Name="vl_num" Type="smallmoney" />
+  </EntityType>
+  <EntityType Name="CtbLan">
+    <Key>
+      <PropertyRef Name="id_lan" />
+    </Key>
+    <Property Name="id_lan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dt_lan" Type="smalldatetime" Nullable="false" />
+    <Property Name="id_contadb" Type="char" MaxLength="5" />
+    <Property Name="id_contacr" Type="char" MaxLength="5" />
+    <Property Name="obs_historico" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_acao" Type="char" MaxLength="6" />
+    <Property Name="qt_acao" Type="int" />
+    <Property Name="vl_lan" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CtbSaldoIni">
+    <Key>
+      <PropertyRef Name="dt_saldo" />
+      <PropertyRef Name="id_conta" />
+    </Key>
+    <Property Name="dt_saldo" Type="smalldatetime" Nullable="false" />
+    <Property Name="id_conta" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="vl_db" Type="money" Nullable="false" />
+    <Property Name="vl_cr" Type="money" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CadConta_CtbSaldoIni">
+    <End Role="CadConta" Type="Self.CadConta" Multiplicity="1" />
+    <End Role="CtbSaldoIni" Type="Self.CtbSaldoIni" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CadConta">
+        <PropertyRef Name="id_conta" />
+      </Principal>
+      <Dependent Role="CtbSaldoIni">
+        <PropertyRef Name="id_conta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CtbLan_CadAcao">
+    <End Role="CadAcao" Type="Self.CadAcao" Multiplicity="0..1" />
+    <End Role="CtbLan" Type="Self.CtbLan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CadAcao">
+        <PropertyRef Name="id_acao" />
+      </Principal>
+      <Dependent Role="CtbLan">
+        <PropertyRef Name="id_acao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CtbLan_CodNeg_cr">
+    <End Role="CadConta" Type="Self.CadConta" Multiplicity="0..1" />
+    <End Role="CtbLan" Type="Self.CtbLan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CadConta">
+        <PropertyRef Name="id_conta" />
+      </Principal>
+      <Dependent Role="CtbLan">
+        <PropertyRef Name="id_contacr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CtbLan_CodNeg_db">
+    <End Role="CadConta" Type="Self.CadConta" Multiplicity="0..1" />
+    <End Role="CtbLan" Type="Self.CtbLan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CadConta">
+        <PropertyRef Name="id_conta" />
+      </Principal>
+      <Dependent Role="CtbLan">
+        <PropertyRef Name="id_contadb" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="up_CadAcao_Alterar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_acao" Type="char" Mode="In" />
+    <Parameter Name="nome_resumido" Type="varchar" Mode="In" />
+    <Parameter Name="obs_especificacao" Type="varchar" Mode="In" />
+    <Parameter Name="num_fatorcot" Type="int" Mode="In" />
+    <Parameter Name="num_lotepdr" Type="int" Mode="In" />
+  </Function>
+  <Function Name="up_CadAcao_Incluir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_acao" Type="char" Mode="In" />
+    <Parameter Name="nome_resumido" Type="varchar" Mode="In" />
+    <Parameter Name="obs_especificacao" Type="varchar" Mode="In" />
+    <Parameter Name="num_fatorcot" Type="int" Mode="In" />
+    <Parameter Name="num_lotepdr" Type="int" Mode="In" />
+  </Function>
+  <Function Name="up_CadAcao_ListarManutencao" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="up_CadAcao_LocalizarId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_acao" Type="char" Mode="In" />
+  </Function>
+  <Function Name="up_CadConta_Alterar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_conta" Type="char" Mode="In" />
+    <Parameter Name="descr" Type="varchar" Mode="In" />
+    <Parameter Name="ind_tipo" Type="char" Mode="In" />
+  </Function>
+  <Function Name="up_CadConta_Excluir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_conta" Type="char" Mode="In" />
+  </Function>
+  <Function Name="up_CadConta_Incluir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_conta" Type="char" Mode="In" />
+    <Parameter Name="descr" Type="varchar" Mode="In" />
+    <Parameter Name="ind_tipo" Type="char" Mode="In" />
+  </Function>
+  <Function Name="up_CadConta_ListarManutencao" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="up_CadConta_ListarPickList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="up_CadConta_LocalizarId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_conta" Type="char" Mode="In" />
+  </Function>
+  <Function Name="up_CadCotaHist_Incluir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Acao" Type="char" Mode="In" />
+    <Parameter Name="dt_Pregao" Type="smalldatetime" Mode="In" />
+    <Parameter Name="vl_Abertura" Type="money" Mode="In" />
+    <Parameter Name="vl_Maximo" Type="money" Mode="In" />
+    <Parameter Name="vl_Minimo" Type="money" Mode="In" />
+    <Parameter Name="vl_Medio" Type="money" Mode="In" />
+    <Parameter Name="vl_Ultimo" Type="money" Mode="In" />
+    <Parameter Name="qt_Negocio" Type="int" Mode="In" />
+    <Parameter Name="num_FatCot" Type="int" Mode="In" />
+  </Function>
+  <Function Name="up_CadCotaHist_LocalizarId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Acao" Type="char" Mode="In" />
+    <Parameter Name="dt_Pregao" Type="smalldatetime" Mode="In" />
+  </Function>
+  <Function Name="up_CadIndice_Atualizar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_indice" Type="tinyint" Mode="In" />
+    <Parameter Name="dt_pregao" Type="smalldatetime" Mode="In" />
+    <Parameter Name="qt_ponto" Type="smallmoney" Mode="In" />
+  </Function>
+  <Function Name="up_CadIndice_ListarPorPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_indice" Type="tinyint" Mode="In" />
+    <Parameter Name="dt_ini" Type="smalldatetime" Mode="In" />
+    <Parameter Name="dt_fim" Type="smalldatetime" Mode="In" />
+  </Function>
+  <Function Name="up_CadParametro_Alterar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Parametro" Type="char" Mode="In" />
+    <Parameter Name="descr" Type="varchar" Mode="In" />
+    <Parameter Name="vl_str" Type="varchar" Mode="In" />
+    <Parameter Name="vl_num" Type="smallmoney" Mode="In" />
+  </Function>
+  <Function Name="up_CadParametro_Excluir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Parametro" Type="char" Mode="In" />
+  </Function>
+  <Function Name="up_CadParametro_Incluir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Parametro" Type="char" Mode="In" />
+    <Parameter Name="descr" Type="varchar" Mode="In" />
+    <Parameter Name="vl_str" Type="varchar" Mode="In" />
+    <Parameter Name="vl_num" Type="smallmoney" Mode="In" />
+  </Function>
+  <Function Name="up_CadParametro_ListarManutencao" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="up_CadParametro_LocalizarId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_parametro" Type="char" Mode="In" />
+  </Function>
+  <Function Name="up_CtbLan_Alterar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_lan" Type="int" Mode="In" />
+    <Parameter Name="dt_lan" Type="smalldatetime" Mode="In" />
+    <Parameter Name="id_contadb" Type="char" Mode="In" />
+    <Parameter Name="id_contacr" Type="char" Mode="In" />
+    <Parameter Name="obs_historico" Type="varchar" Mode="In" />
+    <Parameter Name="id_acao" Type="char" Mode="In" />
+    <Parameter Name="qt_acao" Type="int" Mode="In" />
+    <Parameter Name="vl_lan" Type="money" Mode="In" />
+  </Function>
+  <Function Name="up_CtbLan_Excluir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_lan" Type="int" Mode="In" />
+  </Function>
+  <Function Name="up_CtbLan_Incluir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_lan" Type="int" Mode="In" />
+    <Parameter Name="dt_lan" Type="smalldatetime" Mode="In" />
+    <Parameter Name="id_contadb" Type="char" Mode="In" />
+    <Parameter Name="id_contacr" Type="char" Mode="In" />
+    <Parameter Name="obs_historico" Type="varchar" Mode="In" />
+    <Parameter Name="id_acao" Type="char" Mode="In" />
+    <Parameter Name="qt_acao" Type="int" Mode="In" />
+    <Parameter Name="vl_lan" Type="money" Mode="In" />
+  </Function>
+  <Function Name="up_CtbLan_ListarAnalitico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dt_ini" Type="datetime" Mode="In" />
+    <Parameter Name="id_conta" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="up_CtbLan_ListarBalancete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dt_ini" Type="smalldatetime" Mode="In" />
+  </Function>
+  <Function Name="up_CtbLan_ListarBalancete2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dt_ini" Type="smalldatetime" Mode="In" />
+  </Function>
+  <Function Name="up_CtbLan_ListarManutencao" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dt_ini" Type="smalldatetime" Mode="In" />
+  </Function>
+  <Function Name="up_CtbLan_LocalizarId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_lan" Type="int" Mode="In" />
+  </Function>
+  <Function Name="up_CtbSaldoIni_Encerrar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dt_ini" Type="smalldatetime" Mode="In" />
+  </Function>
+  <Function Name="up_InvCotacao_Incluir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_acao" Type="char" Mode="In" />
+    <Parameter Name="dt_pregao" Type="smalldatetime" Mode="In" />
+    <Parameter Name="qt_negocio" Type="int" Mode="In" />
+    <Parameter Name="num_fatorcot" Type="int" Mode="In" />
+    <Parameter Name="vl_max" Type="smallmoney" Mode="In" />
+    <Parameter Name="vl_min" Type="smallmoney" Mode="In" />
+    <Parameter Name="vl_ult" Type="smallmoney" Mode="In" />
+  </Function>
+  <Function Name="up_InvCotacao_ListarConsulta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_acao" Type="char" Mode="In" />
+  </Function>
+  <Function Name="up_InvCotacao_ListarOscilacao" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="up_InvCotacao_ListarPorPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_acao" Type="char" Mode="In" />
+    <Parameter Name="dt_ini" Type="smalldatetime" Mode="In" />
+    <Parameter Name="dt_fim" Type="smalldatetime" Mode="In" />
+  </Function>
+  <Function Name="up_InvCotacao_LocalizarId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_Acao" Type="char" Mode="In" />
+    <Parameter Name="dt_Pregao" Type="smalldatetime" Mode="In" />
+  </Function>
+  <Function Name="up_InvCotacao_ObterSeExistePregao" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dt_Pregao" Type="smalldatetime" Mode="In" />
+  </Function>
+  <Function Name="up_InvCotacao_ObterUltPregao" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dt_pregao" Type="smalldatetime" Mode="In" />
+  </Function>
+  <Function Name="up_InvOrdem_Alterar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_lan" Type="int" Mode="In" />
+    <Parameter Name="dt_pregao" Type="smalldatetime" Mode="In" />
+    <Parameter Name="id_acao" Type="char" Mode="In" />
+    <Parameter Name="qt_ordem" Type="smallmoney" Mode="In" />
+    <Parameter Name="vl_ordem" Type="smallmoney" Mode="In" />
+    <Parameter Name="vl_custo" Type="smallmoney" Mode="In" />
+    <Parameter Name="vl_lucro" Type="smallmoney" Mode="In" />
+    <Parameter Name="ind_ope" Type="char" Mode="In" />
+  </Function>
+  <Function Name="up_InvOrdem_Excluir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_lan" Type="int" Mode="In" />
+  </Function>
+  <Function Name="up_InvOrdem_Incluir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_lan" Type="int" Mode="In" />
+    <Parameter Name="dt_pregao" Type="smalldatetime" Mode="In" />
+    <Parameter Name="id_acao" Type="char" Mode="In" />
+    <Parameter Name="qt_ordem" Type="smallmoney" Mode="In" />
+    <Parameter Name="vl_ordem" Type="smallmoney" Mode="In" />
+    <Parameter Name="vl_custo" Type="smallmoney" Mode="In" />
+    <Parameter Name="vl_lucro" Type="smallmoney" Mode="In" />
+    <Parameter Name="ind_ope" Type="char" Mode="In" />
+  </Function>
+  <Function Name="up_InvOrdem_ListarCarteira" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="up_InvOrdem_ListarCompra" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_acao" Type="char" Mode="In" />
+  </Function>
+  <Function Name="up_InvOrdem_ListarManutencao" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="up_InvOrdem_ListarPorData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dt_pregao" Type="smalldatetime" Mode="In" />
+  </Function>
+  <Function Name="up_InvOrdem_LocalizarId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_lan" Type="int" Mode="In" />
+  </Function>
+  <Function Name="zListarOrdem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="FinModelStoreContainer">
+    <EntitySet Name="CadAcao" EntityType="Self.CadAcao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CadConta" EntityType="Self.CadConta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CadCotaHist" EntityType="Self.CadCotaHist" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CadIndice" EntityType="Self.CadIndice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CadParametro" EntityType="Self.CadParametro" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CtbLan" EntityType="Self.CtbLan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CtbSaldoIni" EntityType="Self.CtbSaldoIni" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CadConta_CtbSaldoIni" Association="Self.FK_CadConta_CtbSaldoIni">
+      <End Role="CadConta" EntitySet="CadConta" />
+      <End Role="CtbSaldoIni" EntitySet="CtbSaldoIni" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CtbLan_CadAcao" Association="Self.FK_CtbLan_CadAcao">
+      <End Role="CadAcao" EntitySet="CadAcao" />
+      <End Role="CtbLan" EntitySet="CtbLan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CtbLan_CodNeg_cr" Association="Self.FK_CtbLan_CodNeg_cr">
+      <End Role="CadConta" EntitySet="CadConta" />
+      <End Role="CtbLan" EntitySet="CtbLan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CtbLan_CodNeg_db" Association="Self.FK_CtbLan_CodNeg_db">
+      <End Role="CadConta" EntitySet="CadConta" />
+      <End Role="CtbLan" EntitySet="CtbLan" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

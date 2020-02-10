@@ -1,0 +1,412 @@
+INFO  2017-03-29 07:33:31,522  1142ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 07:34:15,769 45389ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 07:34:16,137 45757ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 07:34:20,142 49762ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: gridData - value: ;
+INFO  2017-03-29 07:35:30,230   851ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 07:35:30,230   851ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 07:35:30,445  1066ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: gridSel - value: ;
+INFO  2017-03-29 07:36:18,226   856ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 07:36:18,227   857ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 07:37:48,423   816ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 07:37:48,423   816ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 07:37:55,811  8203ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 07:37:56,072  8464ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+ERROR 2017-03-29 07:38:00,715 13108ms Log4NetConfig          OnException        - OnException - Controller:MvcDemo.HomeController
+System.ArgumentException: JSON primitivo inválido: gridSel.
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializePrimitiveObject()
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializeInternal(Int32 depth)
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.BasicDeserialize(String input, Int32 depthLimit, JavaScriptSerializer serializer)
+   em System.Web.Script.Serialization.JavaScriptSerializer.Deserialize(JavaScriptSerializer serializer, String input, Type type, Int32 depthLimit)
+   em System.Web.Script.Serialization.JavaScriptSerializer.DeserializeObject(String input)
+   em System.Web.Mvc.JsonValueProviderFactory.GetDeserializedObject(ControllerContext controllerContext)
+   em System.Web.Mvc.JsonValueProviderFactory.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ValueProviderFactoryCollection.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ControllerBase.get_ValueProvider()
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+ERROR 2017-03-29 07:38:31,503 43896ms Log4NetConfig          OnException        - OnException - Controller:MvcDemo.HomeController
+System.ArgumentException: JSON primitivo inválido: gridSel.
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializePrimitiveObject()
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializeInternal(Int32 depth)
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.BasicDeserialize(String input, Int32 depthLimit, JavaScriptSerializer serializer)
+   em System.Web.Script.Serialization.JavaScriptSerializer.Deserialize(JavaScriptSerializer serializer, String input, Type type, Int32 depthLimit)
+   em System.Web.Script.Serialization.JavaScriptSerializer.DeserializeObject(String input)
+   em System.Web.Mvc.JsonValueProviderFactory.GetDeserializedObject(ControllerContext controllerContext)
+   em System.Web.Mvc.JsonValueProviderFactory.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ValueProviderFactoryCollection.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ControllerBase.get_ValueProvider()
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+INFO  2017-03-29 07:40:11,938   538ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 07:40:27,788 16387ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 07:40:28,735 17334ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+ERROR 2017-03-29 07:40:34,479 23078ms Log4NetConfig          OnException        - OnException - Controller:MvcDemo.HomeController
+System.ArgumentException: JSON primitivo inválido: gridSel.
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializePrimitiveObject()
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializeInternal(Int32 depth)
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.BasicDeserialize(String input, Int32 depthLimit, JavaScriptSerializer serializer)
+   em System.Web.Script.Serialization.JavaScriptSerializer.Deserialize(JavaScriptSerializer serializer, String input, Type type, Int32 depthLimit)
+   em System.Web.Script.Serialization.JavaScriptSerializer.DeserializeObject(String input)
+   em System.Web.Mvc.JsonValueProviderFactory.GetDeserializedObject(ControllerContext controllerContext)
+   em System.Web.Mvc.JsonValueProviderFactory.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ValueProviderFactoryCollection.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ControllerBase.get_ValueProvider()
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+INFO  2017-03-29 07:48:36,933   807ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+ERROR 2017-03-29 07:49:33,562 45331ms Log4NetConfig          OnException        - OnException - Controller:MvcDemo.HomeController
+System.ArgumentException: JSON primitivo inválido: gridSel.
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializePrimitiveObject()
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializeInternal(Int32 depth)
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.BasicDeserialize(String input, Int32 depthLimit, JavaScriptSerializer serializer)
+   em System.Web.Script.Serialization.JavaScriptSerializer.Deserialize(JavaScriptSerializer serializer, String input, Type type, Int32 depthLimit)
+   em System.Web.Script.Serialization.JavaScriptSerializer.DeserializeObject(String input)
+   em System.Web.Mvc.JsonValueProviderFactory.GetDeserializedObject(ControllerContext controllerContext)
+   em System.Web.Mvc.JsonValueProviderFactory.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ValueProviderFactoryCollection.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ControllerBase.get_ValueProvider()
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+INFO  2017-03-29 07:51:16,566 148335ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 07:51:17,376 149145ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+ERROR 2017-03-29 07:51:21,197 152966ms Log4NetConfig          OnException        - OnException - Controller:MvcDemo.HomeController
+System.ArgumentException: JSON primitivo inválido: gridSel.
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializePrimitiveObject()
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializeInternal(Int32 depth)
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.BasicDeserialize(String input, Int32 depthLimit, JavaScriptSerializer serializer)
+   em System.Web.Script.Serialization.JavaScriptSerializer.Deserialize(JavaScriptSerializer serializer, String input, Type type, Int32 depthLimit)
+   em System.Web.Script.Serialization.JavaScriptSerializer.DeserializeObject(String input)
+   em System.Web.Mvc.JsonValueProviderFactory.GetDeserializedObject(ControllerContext controllerContext)
+   em System.Web.Mvc.JsonValueProviderFactory.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ValueProviderFactoryCollection.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ControllerBase.get_ValueProvider()
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+INFO  2017-03-29 07:52:54,858   853ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 07:52:54,858   853ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 07:53:02,073  8067ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 07:53:07,538 13533ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 07:53:08,322 14317ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+ERROR 2017-03-29 07:53:18,563 24558ms Log4NetConfig          OnException        - OnException - Controller:MvcDemo.HomeController
+System.ArgumentException: JSON primitivo inválido: gridSel.
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializePrimitiveObject()
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializeInternal(Int32 depth)
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.BasicDeserialize(String input, Int32 depthLimit, JavaScriptSerializer serializer)
+   em System.Web.Script.Serialization.JavaScriptSerializer.Deserialize(JavaScriptSerializer serializer, String input, Type type, Int32 depthLimit)
+   em System.Web.Script.Serialization.JavaScriptSerializer.DeserializeObject(String input)
+   em System.Web.Mvc.JsonValueProviderFactory.GetDeserializedObject(ControllerContext controllerContext)
+   em System.Web.Mvc.JsonValueProviderFactory.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ValueProviderFactoryCollection.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ControllerBase.get_ValueProvider()
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+INFO  2017-03-29 07:56:09,476 195470ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 07:56:13,772 199766ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+ERROR 2017-03-29 07:56:19,518 205512ms Log4NetConfig          OnException        - OnException - Controller:MvcDemo.HomeController
+System.ArgumentException: JSON primitivo inválido: gridSel.
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializePrimitiveObject()
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializeInternal(Int32 depth)
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.BasicDeserialize(String input, Int32 depthLimit, JavaScriptSerializer serializer)
+   em System.Web.Script.Serialization.JavaScriptSerializer.Deserialize(JavaScriptSerializer serializer, String input, Type type, Int32 depthLimit)
+   em System.Web.Script.Serialization.JavaScriptSerializer.DeserializeObject(String input)
+   em System.Web.Mvc.JsonValueProviderFactory.GetDeserializedObject(ControllerContext controllerContext)
+   em System.Web.Mvc.JsonValueProviderFactory.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ValueProviderFactoryCollection.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ControllerBase.get_ValueProvider()
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+ERROR 2017-03-29 07:56:52,331 238325ms Log4NetConfig          OnException        - OnException - Controller:MvcDemo.HomeController
+System.ArgumentException: JSON primitivo inválido: gridSel.
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializePrimitiveObject()
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializeInternal(Int32 depth)
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.BasicDeserialize(String input, Int32 depthLimit, JavaScriptSerializer serializer)
+   em System.Web.Script.Serialization.JavaScriptSerializer.Deserialize(JavaScriptSerializer serializer, String input, Type type, Int32 depthLimit)
+   em System.Web.Script.Serialization.JavaScriptSerializer.DeserializeObject(String input)
+   em System.Web.Mvc.JsonValueProviderFactory.GetDeserializedObject(ControllerContext controllerContext)
+   em System.Web.Mvc.JsonValueProviderFactory.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ValueProviderFactoryCollection.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ControllerBase.get_ValueProvider()
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+INFO  2017-03-29 07:58:52,916 358910ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 07:58:57,051 363046ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 07:59:01,949 367943ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 07:59:01,960 367954ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: gridSel - value: System.String[];
+INFO  2017-03-29 07:59:07,842 373837ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:00:09,353 435347ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:00:13,767 439761ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+ERROR 2017-03-29 08:00:19,870 445864ms Log4NetConfig          OnException        - OnException - Controller:MvcDemo.HomeController
+System.ArgumentException: JSON primitivo inválido: gridSel.
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializePrimitiveObject()
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializeInternal(Int32 depth)
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.BasicDeserialize(String input, Int32 depthLimit, JavaScriptSerializer serializer)
+   em System.Web.Script.Serialization.JavaScriptSerializer.Deserialize(JavaScriptSerializer serializer, String input, Type type, Int32 depthLimit)
+   em System.Web.Script.Serialization.JavaScriptSerializer.DeserializeObject(String input)
+   em System.Web.Mvc.JsonValueProviderFactory.GetDeserializedObject(ControllerContext controllerContext)
+   em System.Web.Mvc.JsonValueProviderFactory.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ValueProviderFactoryCollection.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ControllerBase.get_ValueProvider()
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+INFO  2017-03-29 08:01:40,390 526384ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:01:44,854 530849ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+ERROR 2017-03-29 08:01:53,926 539920ms Log4NetConfig          OnException        - OnException - Controller:MvcDemo.HomeController
+System.ArgumentException: JSON primitivo inválido: gridSel.
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializePrimitiveObject()
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializeInternal(Int32 depth)
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.BasicDeserialize(String input, Int32 depthLimit, JavaScriptSerializer serializer)
+   em System.Web.Script.Serialization.JavaScriptSerializer.Deserialize(JavaScriptSerializer serializer, String input, Type type, Int32 depthLimit)
+   em System.Web.Script.Serialization.JavaScriptSerializer.DeserializeObject(String input)
+   em System.Web.Mvc.JsonValueProviderFactory.GetDeserializedObject(ControllerContext controllerContext)
+   em System.Web.Mvc.JsonValueProviderFactory.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ValueProviderFactoryCollection.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ControllerBase.get_ValueProvider()
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+INFO  2017-03-29 08:03:47,072   769ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 08:04:03,955 17651ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:04:05,146 18842ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+ERROR 2017-03-29 08:04:06,706 20403ms Log4NetConfig          OnException        - OnException - Controller:MvcDemo.HomeController
+System.ArgumentException: JSON primitivo inválido: gridSel.
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializePrimitiveObject()
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.DeserializeInternal(Int32 depth)
+   em System.Web.Script.Serialization.JavaScriptObjectDeserializer.BasicDeserialize(String input, Int32 depthLimit, JavaScriptSerializer serializer)
+   em System.Web.Script.Serialization.JavaScriptSerializer.Deserialize(JavaScriptSerializer serializer, String input, Type type, Int32 depthLimit)
+   em System.Web.Script.Serialization.JavaScriptSerializer.DeserializeObject(String input)
+   em System.Web.Mvc.JsonValueProviderFactory.GetDeserializedObject(ControllerContext controllerContext)
+   em System.Web.Mvc.JsonValueProviderFactory.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ValueProviderFactoryCollection.GetValueProvider(ControllerContext controllerContext)
+   em System.Web.Mvc.ControllerBase.get_ValueProvider()
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+INFO  2017-03-29 08:05:35,035   913ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:05:35,035   913ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:05:42,609  8486ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:05:42,675  8552ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:06:02,385 28262ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: gridSel - value: kkk;
+INFO  2017-03-29 08:07:11,783   766ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:07:18,973  7955ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:07:22,035 11018ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:07:22,890 11873ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:07:26,281 15264ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: gridSel - value: ;
+INFO  2017-03-29 08:10:47,935   774ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 08:11:00,431 13269ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:11:01,367 14205ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:11:07,605 20444ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: gridSel - value: ;
+INFO  2017-03-29 08:11:53,478   855ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 08:12:08,392 15769ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:12:09,319 16695ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+ERROR 2017-03-29 08:12:11,934 19310ms Log4NetConfig          OnException        - OnException - Controller:MvcDemo.HomeController
+System.MissingMethodException: Não é possível criar uma classe abstract. Tipo de objeto 'System.Array'. ---> System.MissingMethodException: Não é possível criar uma classe abstract.
+   em System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   em System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   em System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   em System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   em System.Activator.CreateInstance(Type type)
+   em System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Web.Mvc.DefaultModelBinder.CreateModel(ControllerContext controllerContext, ModelBindingContext bindingContext, Type modelType)
+   em System.Web.Mvc.DefaultModelBinder.BindComplexModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   em System.Web.Mvc.DefaultModelBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   em DevExpress.Web.Mvc.DevExpressEditorsBinder.BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValue(ControllerContext controllerContext, ParameterDescriptor parameterDescriptor)
+   em System.Web.Mvc.ControllerActionInvoker.GetParameterValues(ControllerContext controllerContext, ActionDescriptor actionDescriptor)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+INFO  2017-03-29 08:26:10,585   845ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:26:10,585   845ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:26:18,336  8596ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:26:46,868 37128ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:26:47,706 37966ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:27:17,948 68208ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:27:22,577 72837ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:27:54,266 104526ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:27:58,660 108920ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:28:02,567 112827ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: gridSel - value: kkk;
+INFO  2017-03-29 08:29:16,626   640ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:29:23,778  7791ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:29:27,690 11704ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:29:28,651 12665ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:29:32,456 16469ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: kkk;Parameter: pTipo - value: P;
+INFO  2017-03-29 08:30:34,118   777ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:30:41,504  8162ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:30:42,799  9457ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:30:43,727 10386ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:30:47,431 14090ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: System.Int32[];Parameter: pTipo - value: P;
+INFO  2017-03-29 08:33:42,347   860ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 08:33:52,202 10715ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:33:53,102 11615ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:34:01,878 20391ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: System.Int32[];Parameter: pTipo - value: P;
+INFO  2017-03-29 08:34:16,813 35326ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: ;Parameter: pTipo - value: P;
+INFO  2017-03-29 08:36:57,886  2999ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 08:49:38,665 763778ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: System.Int32[];Parameter: pTipo - value: P;
+INFO  2017-03-29 08:50:53,380 838492ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:50:57,913 843026ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:51:01,688 846800ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: System.Int32[];Parameter: pTipo - value: P;
+INFO  2017-03-29 08:53:22,320   828ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 08:53:31,876 10384ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:53:32,766 11274ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:53:36,482 14990ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: System.Int32[];Parameter: pTipo - value: P;
+INFO  2017-03-29 08:54:24,259   737ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 08:54:35,318 11796ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:54:36,179 12657ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:55:02,741 39218ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: ;Parameter: pTipo - value: P;
+INFO  2017-03-29 08:56:20,114 116591ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:56:24,257 120735ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:56:32,064 128541ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: ;Parameter: pTipo - value: P;
+INFO  2017-03-29 08:57:22,591 179068ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 08:57:26,936 183414ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 08:57:29,128 185606ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: ;Parameter: pTipo - value: P;
+INFO  2017-03-29 09:00:01,286 337764ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:00:05,657 342135ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:00:28,632 365110ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:00:33,254 369732ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:00:38,365 374843ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: ;Parameter: pTipo - value: P;
+INFO  2017-03-29 09:01:09,949 406427ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:01:14,446 410924ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:01:18,394 414872ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: ;Parameter: pTipo - value: P;
+INFO  2017-03-29 09:02:30,378 486856ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:02:35,028 491506ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:02:53,422 509900ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:02:57,885 514363ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:03:03,150 519628ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:03:07,397 523875ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:03:11,820 528298ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: ;Parameter: pTipo - value: P;
+INFO  2017-03-29 09:05:23,594 660072ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:05:27,986 664464ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:06:26,502 722980ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:06:30,972 727450ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:06:53,094 749572ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:06:57,450 753928ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:06:59,840 756318ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: ;Parameter: pTipo - value: P;
+INFO  2017-03-29 09:09:25,688   859ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:09:25,688   859ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: 127.0.0.1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 09:09:32,638  7809ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:09:39,089 14260ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:09:39,769 14940ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:19:02,433  1091ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:19:09,800  8457ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:19:32,826 31484ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:19:33,612 32270ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:23:21,222 259879ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:23:25,622 264280ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:24:12,406 311064ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:24:17,124 315782ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:24:44,671 343329ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: ;Parameter: pTipo - value: P;
+INFO  2017-03-29 09:27:04,107   816ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: 127.0.0.1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:27:11,385  8093ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: 127.0.0.1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:27:14,285 10994ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: 127.0.0.1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:27:15,159 11868ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: 127.0.0.1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:27:30,558 27266ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: 127.0.0.1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:27:31,408 28116ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 09:28:33,642   797ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 09:28:43,605 10760ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 09:28:44,529 11684ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:07:10,151 2317305ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:07:14,592 2321747ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:10:13,214 2500369ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:10:14,206 2501361ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:12:00,738 2607892ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:12:01,568 2608722ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:12:49,098 2656253ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:12:53,567 2660722ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:13:40,767 2707921ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:13:41,581 2708735ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:14:36,650   773ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 10:15:04,999 29121ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:15:05,940 30063ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:15:52,898 77020ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:15:57,491 81614ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:16:54,886 139008ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:16:59,281 143404ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:18:37,203 241326ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:18:41,691 245813ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:18:54,450 258572ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:18:58,939 263062ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:22:43,455 487577ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:22:48,425 492548ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:23:05,774 509896ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:23:10,507 514629ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:25:08,924 633047ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:25:13,443 637565ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:25:21,123 645245ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:25:25,511 649633ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:26:09,405 693528ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+ERROR 2017-03-29 10:26:13,050 697172ms Log4NetConfig          OnException        - OnException - Controller:MvcDemo.HomeController
+System.Web.HttpException (0x80004005): The following sections have been defined but have not been rendered for the layout page "~/Views/Shared/_Layout.vbhtml": "Styles".
+   em System.Web.WebPages.WebPageBase.VerifyRenderedBodyOrSections()
+   em System.Web.WebPages.WebPageBase.PopContext()
+   em System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   em System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer)
+   em System.Web.WebPages.WebPageBase.<>c__DisplayClass3.<RenderPageCore>b__2(TextWriter writer)
+   em System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)
+   em System.Web.WebPages.WebPageExecutingBase.WriteTo(TextWriter writer, HelperResult content)
+   em System.Web.WebPages.WebPageBase.Write(HelperResult result)
+   em System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)
+   em System.Web.WebPages.WebPageBase.PopContext()
+   em System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   em System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   em System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   em System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   em System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   em System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   em System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   em System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+INFO  2017-03-29 10:26:28,574 712697ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:26:32,955 717077ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:32:45,305 1089427ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:32:50,253 1094375ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:33:59,052 1163175ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: System.Int32[];Parameter: pTipo - value: P;
+INFO  2017-03-29 10:35:29,021   801ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 10:36:01,803 33582ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:36:02,646 34425ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:36:04,452 36231ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: System.Int32[];Parameter: pTipo - value: P;
+INFO  2017-03-29 10:36:07,274 39053ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: System.Int32[];Parameter: pTipo - value: P;
+INFO  2017-03-29 10:36:09,714 41493ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTesteProcessar, ActionParameters:Parameter: pSel - value: ;Parameter: pTipo - value: P;
+INFO  2017-03-29 10:41:06,119   805ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:41:13,926  8611ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:41:44,602 39287ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:41:45,503 40189ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:44:39,541   697ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 10:44:49,449 10605ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:44:50,390 11545ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:46:24,439   876ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 10:46:35,166 11603ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:46:36,092 12529ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:47:56,208 92645ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:48:00,968 97404ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:48:26,464 122901ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:48:30,948 127384ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:53:42,811   868ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-03-29 10:53:54,548 12605ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:53:55,463 13520ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:55:24,168   842ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:55:31,791  8464ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:55:40,004 16677ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:55:40,925 17598ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 10:58:46,533 203207ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 10:58:50,933 207606ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 11:00:20,825 297498ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 11:00:25,305 301979ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 11:02:39,637 436311ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 11:02:44,619 441293ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 11:03:44,466 501140ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 11:03:50,399 507072ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 11:05:04,109 580783ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 11:05:08,724 585398ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 16:07:51,707   821ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 16:08:03,798 12912ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;
+INFO  2017-03-29 16:15:46,984 476099ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:
+INFO  2017-03-29 16:15:51,941 481056ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: jqgridTeste, ActionParameters:Parameter: xx - value: ;

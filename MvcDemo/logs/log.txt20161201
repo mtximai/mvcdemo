@@ -1,0 +1,13 @@
+DEBUG 2016-12-01 13:05:43,852 20282ms Log4NetConfig          ckeTeste           - Resultado do Logon do Usuario msg1: msg2 
+DEBUG 2016-12-01 13:10:34,218 17346ms Log4NetConfig          ckeTeste           - Resultado do Logon do Usuario msg1: msg2 
+DEBUG 2016-12-01 13:20:01,798 14551ms Log4NetConfig          ckeTeste           - Resultado do Logon do Usuario msg1: msg2 
+DEBUG 2016-12-01 13:25:10,480 59290ms Log4NetConfig          ckeTeste           - Resultado do Logon do Usuario msg1: msg2 
+DEBUG 2016-12-01 13:29:07,640 15328ms Log4NetConfig          ckeTeste           - Resultado do Logon do Usuario {0}: {1} 
+DEBUG 2016-12-01 13:46:34,341 114663ms Log4NetConfig          ckeTeste           - Resultado do Logon do Usuario {0}: {1} 
+DEBUG 2016-12-01 13:47:42,004 13510ms Log4NetConfig          ckeTeste           - Resultado do Logon do Usuario {0}: {1} 
+DEBUG 2016-12-01 14:27:09,694 22766ms Log4NetConfig          ckeTeste           - Resultado do Logon do Usuario {0}: {1} 
+DEBUG 2016-12-01 14:51:27,002 20808ms Log4NetConfig          ckeTeste           - Resultado do Logon do Usuario {0}: {1} 
+DEBUG 2016-12-01 15:58:43,088 12843ms Log4NetConfig          ckeTeste           - Resultado do Logon do Usuario {0}: {1} 
+ERROR 2016-12-01 15:58:43,106 12861ms Log4NetConfig          ckeTeste           - kjlsajflksjflkasjflka
+DEBUG 2016-12-01 16:01:39,597 189351ms Log4NetConfig          ckeTeste           - Resultado do Logon do Usuario {0}: {1} 
+ERROR 2016-12-01 16:01:39,600 189354ms Log4NetConfig          ckeTeste           - kjlsajflksjflkasjflka

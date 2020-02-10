@@ -1,0 +1,4 @@
+DEBUG 2017-01-20 14:18:57,950 23415ms Log4NetConfig          ckeTeste           - xxx Resultado do Logon do Usuario {0}: {1} 
+ERROR 2017-01-20 14:18:58,019 23484ms Log4NetConfig          ckeTeste           - xxx kjlsajflksjflkasjflka
+DEBUG 2017-01-20 14:26:36,823 482288ms Log4NetConfig          ckeTeste           - xxx Resultado do Logon do Usuario {0}: {1} 
+ERROR 2017-01-20 14:26:39,705 485170ms Log4NetConfig          ckeTeste           - xxx kjlsajflksjflkasjflka

@@ -1,0 +1,61 @@
+INFO  2017-04-20 13:32:58,115   826ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: ckeTeste, ActionParameters:
+DEBUG 2017-04-20 13:32:58,186   897ms Log4NetConfig          ckeTeste           - xxx Resultado do Logon do Usuario {0}: {1} 
+ERROR 2017-04-20 13:32:58,193   904ms Log4NetConfig          ckeTeste           - xxx kjlsajflksjflkasjflka
+INFO  2017-04-20 13:33:20,163 22874ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-04-20 13:33:28,566 31277ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: ckeTeste, ActionParameters:
+DEBUG 2017-04-20 13:33:28,567 31278ms Log4NetConfig          ckeTeste           - xxx Resultado do Logon do Usuario {0}: {1} 
+ERROR 2017-04-20 13:33:28,572 31283ms Log4NetConfig          ckeTeste           - xxx kjlsajflksjflkasjflka
+INFO  2017-04-20 13:39:20,537 383248ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: ckeTeste, ActionParameters:Parameter: vm - value: MvcDemo.ModeloCkeditor;
+ERROR 2017-04-20 13:40:07,408 430119ms Log4NetConfig          OnException        - OnException - Controller:MvcDemo.HomeController
+System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   em System.Data.Entity.Internal.InternalContext.SaveChanges()
+   em System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   em System.Data.Entity.DbContext.SaveChanges()
+   em MvcDemo.HomeController.ckeTeste(ModeloCkeditor vm) na C:\mti-projetos\MvcDemo\MvcDemo\Controllers\HomeController.vb:linha 192
+   em lambda_method(Closure , ControllerBase , Object[] )
+   em System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   em System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   em System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   em System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   em System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   em System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   em System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   em System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   em System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   em System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+INFO  2017-04-20 13:40:22,478 445189ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: ckeTeste, ActionParameters:
+DEBUG 2017-04-20 13:40:22,479 445190ms Log4NetConfig          ckeTeste           - xxx Resultado do Logon do Usuario {0}: {1} 
+ERROR 2017-04-20 13:40:22,485 445196ms Log4NetConfig          ckeTeste           - xxx kjlsajflksjflkasjflka
+INFO  2017-04-20 13:41:11,381 494092ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: ckeTeste, ActionParameters:
+DEBUG 2017-04-20 13:41:11,381 494092ms Log4NetConfig          ckeTeste           - xxx Resultado do Logon do Usuario {0}: {1} 
+ERROR 2017-04-20 13:41:11,382 494093ms Log4NetConfig          ckeTeste           - xxx kjlsajflksjflkasjflka
+INFO  2017-04-20 13:43:51,539   711ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-04-20 13:44:03,082 12254ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: ckeTeste, ActionParameters:
+DEBUG 2017-04-20 13:44:03,089 12261ms Log4NetConfig          ckeTeste           - xxx Resultado do Logon do Usuario {0}: {1} 
+ERROR 2017-04-20 13:44:03,093 12265ms Log4NetConfig          ckeTeste           - xxx kjlsajflksjflkasjflka
+INFO  2017-04-20 13:47:26,980   801ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-04-20 13:47:37,013 10834ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: ckeTeste, ActionParameters:
+DEBUG 2017-04-20 13:47:37,019 10840ms Log4NetConfig          ckeTeste           - xxx Resultado do Logon do Usuario {0}: {1} 
+ERROR 2017-04-20 13:47:37,025 10846ms Log4NetConfig          ckeTeste           - xxx kjlsajflksjflkasjflka
+INFO  2017-04-20 13:48:22,454   762ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-04-20 13:48:37,360 15668ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: ckeTeste, ActionParameters:
+DEBUG 2017-04-20 13:48:37,367 15675ms Log4NetConfig          ckeTeste           - xxx Resultado do Logon do Usuario {0}: {1} 
+ERROR 2017-04-20 13:48:37,371 15679ms Log4NetConfig          ckeTeste           - xxx kjlsajflksjflkasjflka
+INFO  2017-04-20 13:51:01,330 159638ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: ckeTeste, ActionParameters:
+DEBUG 2017-04-20 13:51:01,337 159645ms Log4NetConfig          ckeTeste           - xxx Resultado do Logon do Usuario {0}: {1} 
+ERROR 2017-04-20 13:51:01,356 159664ms Log4NetConfig          ckeTeste           - xxx kjlsajflksjflkasjflka
+INFO  2017-04-20 13:51:12,600 170908ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: ckeTeste, ActionParameters:Parameter: vm - value: MvcDemo.ModeloCkeditor;
+INFO  2017-04-20 15:09:30,211   709ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: ckeTeste, ActionParameters:
+DEBUG 2017-04-20 15:09:30,248   746ms Log4NetConfig          ckeTeste           - xxx Resultado do Logon do Usuario {0}: {1} 
+ERROR 2017-04-20 15:09:30,252   750ms Log4NetConfig          ckeTeste           - xxx kjlsajflksjflkasjflka
+INFO  2017-04-20 15:24:26,268   786ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: ckeTeste, ActionParameters:
+DEBUG 2017-04-20 15:24:26,307   825ms Log4NetConfig          ckeTeste           - xxx Resultado do Logon do Usuario {0}: {1} 
+ERROR 2017-04-20 15:24:26,312   830ms Log4NetConfig          ckeTeste           - xxx kjlsajflksjflkasjflka

@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FinModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="CadAcao">
+      <EntityTypeMapping TypeName="FinModel.CadAcao">
+        <MappingFragment StoreEntitySet="CadAcao">
+          <ScalarProperty Name="id_acao" ColumnName="id_acao" />
+          <ScalarProperty Name="nome_resumido" ColumnName="nome_resumido" />
+          <ScalarProperty Name="obs_especificacao" ColumnName="obs_especificacao" />
+          <ScalarProperty Name="num_fatorcot" ColumnName="num_fatorcot" />
+          <ScalarProperty Name="num_lotepdr" ColumnName="num_lotepdr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CadConta">
+      <EntityTypeMapping TypeName="FinModel.CadConta">
+        <MappingFragment StoreEntitySet="CadConta">
+          <ScalarProperty Name="id_conta" ColumnName="id_conta" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="ind_tipo" ColumnName="ind_tipo" />
+          <ScalarProperty Name="ind_natureza" ColumnName="ind_natureza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CadCotaHist">
+      <EntityTypeMapping TypeName="FinModel.CadCotaHist">
+        <MappingFragment StoreEntitySet="CadCotaHist">
+          <ScalarProperty Name="id_Acao" ColumnName="id_Acao" />
+          <ScalarProperty Name="dt_Pregao" ColumnName="dt_Pregao" />
+          <ScalarProperty Name="vl_Abertura" ColumnName="vl_Abertura" />
+          <ScalarProperty Name="vl_Maximo" ColumnName="vl_Maximo" />
+          <ScalarProperty Name="vl_Minimo" ColumnName="vl_Minimo" />
+          <ScalarProperty Name="vl_Medio" ColumnName="vl_Medio" />
+          <ScalarProperty Name="vl_Ultimo" ColumnName="vl_Ultimo" />
+          <ScalarProperty Name="qt_Negocio" ColumnName="qt_Negocio" />
+          <ScalarProperty Name="num_FatCot" ColumnName="num_FatCot" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CadIndice">
+      <EntityTypeMapping TypeName="FinModel.CadIndice">
+        <MappingFragment StoreEntitySet="CadIndice">
+          <ScalarProperty Name="id_indice" ColumnName="id_indice" />
+          <ScalarProperty Name="dt_pregao" ColumnName="dt_pregao" />
+          <ScalarProperty Name="qt_ponto" ColumnName="qt_ponto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CadParametro">
+      <EntityTypeMapping TypeName="FinModel.CadParametro">
+        <MappingFragment StoreEntitySet="CadParametro">
+          <ScalarProperty Name="id_Parametro" ColumnName="id_Parametro" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="vl_str" ColumnName="vl_str" />
+          <ScalarProperty Name="vl_num" ColumnName="vl_num" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CtbLan">
+      <EntityTypeMapping TypeName="FinModel.CtbLan">
+        <MappingFragment StoreEntitySet="CtbLan">
+          <ScalarProperty Name="id_lan" ColumnName="id_lan" />
+          <ScalarProperty Name="dt_lan" ColumnName="dt_lan" />
+          <ScalarProperty Name="id_contadb" ColumnName="id_contadb" />
+          <ScalarProperty Name="id_contacr" ColumnName="id_contacr" />
+          <ScalarProperty Name="obs_historico" ColumnName="obs_historico" />
+          <ScalarProperty Name="id_acao" ColumnName="id_acao" />
+          <ScalarProperty Name="qt_acao" ColumnName="qt_acao" />
+          <ScalarProperty Name="vl_lan" ColumnName="vl_lan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CtbSaldoIni">
+      <EntityTypeMapping TypeName="FinModel.CtbSaldoIni">
+        <MappingFragment StoreEntitySet="CtbSaldoIni">
+          <ScalarProperty Name="dt_saldo" ColumnName="dt_saldo" />
+          <ScalarProperty Name="id_conta" ColumnName="id_conta" />
+          <ScalarProperty Name="vl_db" ColumnName="vl_db" />
+          <ScalarProperty Name="vl_cr" ColumnName="vl_cr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="up_CadAcao_Alterar" FunctionName="FinModel.Store.up_CadAcao_Alterar" />
+    <FunctionImportMapping FunctionImportName="up_CadAcao_Incluir" FunctionName="FinModel.Store.up_CadAcao_Incluir" />
+    <FunctionImportMapping FunctionImportName="up_CadAcao_ListarManutencao" FunctionName="FinModel.Store.up_CadAcao_ListarManutencao">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_CadAcao_ListarManutencao_Result">
+          <ScalarProperty Name="id_acao" ColumnName="id_acao" />
+          <ScalarProperty Name="nome_resumido" ColumnName="nome_resumido" />
+          <ScalarProperty Name="obs_especificacao" ColumnName="obs_especificacao" />
+          <ScalarProperty Name="num_fatorcot" ColumnName="num_fatorcot" />
+          <ScalarProperty Name="num_lotepdr" ColumnName="num_lotepdr" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_CadAcao_LocalizarId" FunctionName="FinModel.Store.up_CadAcao_LocalizarId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_CadAcao_LocalizarId_Result">
+          <ScalarProperty Name="id_acao" ColumnName="id_acao" />
+          <ScalarProperty Name="nome_resumido" ColumnName="nome_resumido" />
+          <ScalarProperty Name="obs_especificacao" ColumnName="obs_especificacao" />
+          <ScalarProperty Name="num_fatorcot" ColumnName="num_fatorcot" />
+          <ScalarProperty Name="num_lotepdr" ColumnName="num_lotepdr" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_CadConta_Alterar" FunctionName="FinModel.Store.up_CadConta_Alterar" />
+    <FunctionImportMapping FunctionImportName="up_CadConta_Excluir" FunctionName="FinModel.Store.up_CadConta_Excluir" />
+    <FunctionImportMapping FunctionImportName="up_CadConta_Incluir" FunctionName="FinModel.Store.up_CadConta_Incluir" />
+    <FunctionImportMapping FunctionImportName="up_CadConta_ListarManutencao" FunctionName="FinModel.Store.up_CadConta_ListarManutencao">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_CadConta_ListarManutencao_Result">
+          <ScalarProperty Name="id_conta" ColumnName="id_conta" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="ind_tipo" ColumnName="ind_tipo" />
+          <ScalarProperty Name="ind_natureza" ColumnName="ind_natureza" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_CadConta_ListarPickList" FunctionName="FinModel.Store.up_CadConta_ListarPickList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_CadConta_ListarPickList_Result">
+          <ScalarProperty Name="id_conta" ColumnName="id_conta" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_CadConta_LocalizarId" FunctionName="FinModel.Store.up_CadConta_LocalizarId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_CadConta_LocalizarId_Result">
+          <ScalarProperty Name="id_conta" ColumnName="id_conta" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="ind_tipo" ColumnName="ind_tipo" />
+          <ScalarProperty Name="ind_natureza" ColumnName="ind_natureza" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_CadCotaHist_Incluir" FunctionName="FinModel.Store.up_CadCotaHist_Incluir" />
+    <FunctionImportMapping FunctionImportName="up_CadCotaHist_LocalizarId" FunctionName="FinModel.Store.up_CadCotaHist_LocalizarId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_CadCotaHist_LocalizarId_Result">
+          <ScalarProperty Name="id_Acao" ColumnName="id_Acao" />
+          <ScalarProperty Name="dt_Pregao" ColumnName="dt_Pregao" />
+          <ScalarProperty Name="vl_Abertura" ColumnName="vl_Abertura" />
+          <ScalarProperty Name="vl_Maximo" ColumnName="vl_Maximo" />
+          <ScalarProperty Name="vl_Minimo" ColumnName="vl_Minimo" />
+          <ScalarProperty Name="vl_Medio" ColumnName="vl_Medio" />
+          <ScalarProperty Name="vl_Ultimo" ColumnName="vl_Ultimo" />
+          <ScalarProperty Name="qt_Negocio" ColumnName="qt_Negocio" />
+          <ScalarProperty Name="num_FatCot" ColumnName="num_FatCot" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_CadIndice_Atualizar" FunctionName="FinModel.Store.up_CadIndice_Atualizar" />
+    <FunctionImportMapping FunctionImportName="up_CadIndice_ListarPorPeriodo" FunctionName="FinModel.Store.up_CadIndice_ListarPorPeriodo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_CadIndice_ListarPorPeriodo_Result">
+          <ScalarProperty Name="dt_pregao" ColumnName="dt_pregao" />
+          <ScalarProperty Name="qt_ponto" ColumnName="qt_ponto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_CadParametro_Alterar" FunctionName="FinModel.Store.up_CadParametro_Alterar" />
+    <FunctionImportMapping FunctionImportName="up_CadParametro_Excluir" FunctionName="FinModel.Store.up_CadParametro_Excluir" />
+    <FunctionImportMapping FunctionImportName="up_CadParametro_Incluir" FunctionName="FinModel.Store.up_CadParametro_Incluir" />
+    <FunctionImportMapping FunctionImportName="up_CadParametro_ListarManutencao" FunctionName="FinModel.Store.up_CadParametro_ListarManutencao">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_CadParametro_ListarManutencao_Result">
+          <ScalarProperty Name="id_Parametro" ColumnName="id_Parametro" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="vl_str" ColumnName="vl_str" />
+          <ScalarProperty Name="vl_num" ColumnName="vl_num" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_CadParametro_LocalizarId" FunctionName="FinModel.Store.up_CadParametro_LocalizarId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_CadParametro_LocalizarId_Result">
+          <ScalarProperty Name="id_Parametro" ColumnName="id_Parametro" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="vl_str" ColumnName="vl_str" />
+          <ScalarProperty Name="vl_num" ColumnName="vl_num" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_CtbLan_Alterar" FunctionName="FinModel.Store.up_CtbLan_Alterar" />
+    <FunctionImportMapping FunctionImportName="up_CtbLan_Excluir" FunctionName="FinModel.Store.up_CtbLan_Excluir" />
+    <FunctionImportMapping FunctionImportName="up_CtbLan_Incluir" FunctionName="FinModel.Store.up_CtbLan_Incluir" />
+    <FunctionImportMapping FunctionImportName="up_CtbLan_ListarAnalitico" FunctionName="FinModel.Store.up_CtbLan_ListarAnalitico">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_CtbLan_ListarAnalitico_Result">
+          <ScalarProperty Name="dt_lan" ColumnName="dt_lan" />
+          <ScalarProperty Name="id_conta" ColumnName="id_conta" />
+          <ScalarProperty Name="obs_historico" ColumnName="obs_historico" />
+          <ScalarProperty Name="vl_db" ColumnName="vl_db" />
+          <ScalarProperty Name="vl_cr" ColumnName="vl_cr" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_CtbLan_ListarManutencao" FunctionName="FinModel.Store.up_CtbLan_ListarManutencao">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_CtbLan_ListarManutencao_Result">
+          <ScalarProperty Name="id_lan" ColumnName="id_lan" />
+          <ScalarProperty Name="dt_lan" ColumnName="dt_lan" />
+          <ScalarProperty Name="id_contadb" ColumnName="id_contadb" />
+          <ScalarProperty Name="id_contacr" ColumnName="id_contacr" />
+          <ScalarProperty Name="obs_historico" ColumnName="obs_historico" />
+          <ScalarProperty Name="id_acao" ColumnName="id_acao" />
+          <ScalarProperty Name="qt_acao" ColumnName="qt_acao" />
+          <ScalarProperty Name="vl_lan" ColumnName="vl_lan" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_CtbLan_LocalizarId" FunctionName="FinModel.Store.up_CtbLan_LocalizarId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_CtbLan_LocalizarId_Result">
+          <ScalarProperty Name="id_lan" ColumnName="id_lan" />
+          <ScalarProperty Name="dt_lan" ColumnName="dt_lan" />
+          <ScalarProperty Name="id_contadb" ColumnName="id_contadb" />
+          <ScalarProperty Name="id_contacr" ColumnName="id_contacr" />
+          <ScalarProperty Name="obs_historico" ColumnName="obs_historico" />
+          <ScalarProperty Name="id_acao" ColumnName="id_acao" />
+          <ScalarProperty Name="qt_acao" ColumnName="qt_acao" />
+          <ScalarProperty Name="vl_lan" ColumnName="vl_lan" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_CtbSaldoIni_Encerrar" FunctionName="FinModel.Store.up_CtbSaldoIni_Encerrar" />
+    <FunctionImportMapping FunctionImportName="up_InvCotacao_Incluir" FunctionName="FinModel.Store.up_InvCotacao_Incluir" />
+    <FunctionImportMapping FunctionImportName="up_InvCotacao_ListarConsulta" FunctionName="FinModel.Store.up_InvCotacao_ListarConsulta">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_InvCotacao_ListarConsulta_Result">
+          <ScalarProperty Name="dt_pregao" ColumnName="dt_pregao" />
+          <ScalarProperty Name="vl_max" ColumnName="vl_max" />
+          <ScalarProperty Name="vl_min" ColumnName="vl_min" />
+          <ScalarProperty Name="vl_ult" ColumnName="vl_ult" />
+          <ScalarProperty Name="qt_negocio" ColumnName="qt_negocio" />
+          <ScalarProperty Name="qt_ponto" ColumnName="qt_ponto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_InvCotacao_ListarOscilacao" FunctionName="FinModel.Store.up_InvCotacao_ListarOscilacao">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_InvCotacao_ListarOscilacao_Result">
+          <ScalarProperty Name="id_acao" ColumnName="id_acao" />
+          <ScalarProperty Name="nome_resumido" ColumnName="nome_resumido" />
+          <ScalarProperty Name="vl_ult" ColumnName="vl_ult" />
+          <ScalarProperty Name="vl_ant" ColumnName="vl_ant" />
+          <ScalarProperty Name="vl_mes" ColumnName="vl_mes" />
+          <ScalarProperty Name="vl_ano" ColumnName="vl_ano" />
+          <ScalarProperty Name="qt_negocio" ColumnName="qt_negocio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_InvCotacao_ListarPorPeriodo" FunctionName="FinModel.Store.up_InvCotacao_ListarPorPeriodo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_InvCotacao_ListarPorPeriodo_Result">
+          <ScalarProperty Name="dt_pregao" ColumnName="dt_pregao" />
+          <ScalarProperty Name="vl_ult" ColumnName="vl_ult" />
+          <ScalarProperty Name="qt_negocio" ColumnName="qt_negocio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_InvCotacao_LocalizarId" FunctionName="FinModel.Store.up_InvCotacao_LocalizarId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_InvCotacao_LocalizarId_Result">
+          <ScalarProperty Name="id_acao" ColumnName="id_acao" />
+          <ScalarProperty Name="dt_pregao" ColumnName="dt_pregao" />
+          <ScalarProperty Name="qt_negocio" ColumnName="qt_negocio" />
+          <ScalarProperty Name="num_fatorcot" ColumnName="num_fatorcot" />
+          <ScalarProperty Name="vl_max" ColumnName="vl_max" />
+          <ScalarProperty Name="vl_min" ColumnName="vl_min" />
+          <ScalarProperty Name="vl_ult" ColumnName="vl_ult" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_InvCotacao_ObterSeExistePregao" FunctionName="FinModel.Store.up_InvCotacao_ObterSeExistePregao" />
+    <FunctionImportMapping FunctionImportName="up_InvCotacao_ObterUltPregao" FunctionName="FinModel.Store.up_InvCotacao_ObterUltPregao" />
+    <FunctionImportMapping FunctionImportName="up_InvOrdem_Alterar" FunctionName="FinModel.Store.up_InvOrdem_Alterar" />
+    <FunctionImportMapping FunctionImportName="up_InvOrdem_Excluir" FunctionName="FinModel.Store.up_InvOrdem_Excluir" />
+    <FunctionImportMapping FunctionImportName="up_InvOrdem_Incluir" FunctionName="FinModel.Store.up_InvOrdem_Incluir" />
+    <FunctionImportMapping FunctionImportName="up_InvOrdem_ListarCarteira" FunctionName="FinModel.Store.up_InvOrdem_ListarCarteira">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_InvOrdem_ListarCarteira_Result">
+          <ScalarProperty Name="id_acao" ColumnName="id_acao" />
+          <ScalarProperty Name="qt_acao" ColumnName="qt_acao" />
+          <ScalarProperty Name="vl_compra" ColumnName="vl_compra" />
+          <ScalarProperty Name="vl_custo" ColumnName="vl_custo" />
+          <ScalarProperty Name="vl_mercado" ColumnName="vl_mercado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_InvOrdem_ListarCompra" FunctionName="FinModel.Store.up_InvOrdem_ListarCompra">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_InvOrdem_ListarCompra_Result">
+          <ScalarProperty Name="dt_pregao" ColumnName="dt_pregao" />
+          <ScalarProperty Name="vl_unitario" ColumnName="vl_unitario" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_InvOrdem_ListarManutencao" FunctionName="FinModel.Store.up_InvOrdem_ListarManutencao">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_InvOrdem_ListarManutencao_Result">
+          <ScalarProperty Name="id_lan" ColumnName="id_lan" />
+          <ScalarProperty Name="id_acao" ColumnName="id_acao" />
+          <ScalarProperty Name="dt_pregao" ColumnName="dt_pregao" />
+          <ScalarProperty Name="qt_ordem" ColumnName="qt_ordem" />
+          <ScalarProperty Name="vl_ordem" ColumnName="vl_ordem" />
+          <ScalarProperty Name="vl_custo" ColumnName="vl_custo" />
+          <ScalarProperty Name="vl_lucro" ColumnName="vl_lucro" />
+          <ScalarProperty Name="ind_ope" ColumnName="ind_ope" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_InvOrdem_ListarPorData" FunctionName="FinModel.Store.up_InvOrdem_ListarPorData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_InvOrdem_ListarPorData_Result">
+          <ScalarProperty Name="id_lan" ColumnName="id_lan" />
+          <ScalarProperty Name="dt_pregao" ColumnName="dt_pregao" />
+          <ScalarProperty Name="id_acao" ColumnName="id_acao" />
+          <ScalarProperty Name="qt_ordem" ColumnName="qt_ordem" />
+          <ScalarProperty Name="vl_ordem" ColumnName="vl_ordem" />
+          <ScalarProperty Name="vl_custo" ColumnName="vl_custo" />
+          <ScalarProperty Name="vl_lucro" ColumnName="vl_lucro" />
+          <ScalarProperty Name="ind_ope" ColumnName="ind_ope" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_InvOrdem_LocalizarId" FunctionName="FinModel.Store.up_InvOrdem_LocalizarId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_InvOrdem_LocalizarId_Result">
+          <ScalarProperty Name="id_lan" ColumnName="id_lan" />
+          <ScalarProperty Name="dt_pregao" ColumnName="dt_pregao" />
+          <ScalarProperty Name="id_acao" ColumnName="id_acao" />
+          <ScalarProperty Name="qt_ordem" ColumnName="qt_ordem" />
+          <ScalarProperty Name="vl_ordem" ColumnName="vl_ordem" />
+          <ScalarProperty Name="vl_custo" ColumnName="vl_custo" />
+          <ScalarProperty Name="vl_lucro" ColumnName="vl_lucro" />
+          <ScalarProperty Name="ind_ope" ColumnName="ind_ope" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="zListarOrdem" FunctionName="FinModel.Store.zListarOrdem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.zListarOrdem_Result">
+          <ScalarProperty Name="id_lan" ColumnName="id_lan" />
+          <ScalarProperty Name="dt_pregao" ColumnName="dt_pregao" />
+          <ScalarProperty Name="id_acao" ColumnName="id_acao" />
+          <ScalarProperty Name="qt_ordem" ColumnName="qt_ordem" />
+          <ScalarProperty Name="vl_ordem" ColumnName="vl_ordem" />
+          <ScalarProperty Name="vl_custo" ColumnName="vl_custo" />
+          <ScalarProperty Name="vl_lucro" ColumnName="vl_lucro" />
+          <ScalarProperty Name="ind_ope" ColumnName="ind_ope" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="up_CtbLan_ListarBalancete" FunctionName="FinModel.Store.up_CtbLan_ListarBalancete" />
+    <FunctionImportMapping FunctionImportName="up_CtbLan_ListarBalancete2" FunctionName="FinModel.Store.up_CtbLan_ListarBalancete2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FinModel.up_CtbLan_ListarBalancete2_Result">
+          <ScalarProperty Name="id_conta" ColumnName="id_conta" />
+          <ScalarProperty Name="ind_tipo" ColumnName="ind_tipo" />
+          <ScalarProperty Name="descr" ColumnName="descr" />
+          <ScalarProperty Name="vl_ini" ColumnName="vl_ini" />
+          <ScalarProperty Name="vl_movdb" ColumnName="vl_movdb" />
+          <ScalarProperty Name="vl_movcr" ColumnName="vl_movcr" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

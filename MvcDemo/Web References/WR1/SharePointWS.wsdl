@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CarregarItens">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="URLSite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeLista" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Restricoes" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="Servidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Porta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CarregarItensResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CarregarItensResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdicionarItemPorURL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="URLSite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Servidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Porta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeLista" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeArquivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="URLArquivoOrigem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MetaDados" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdicionarItemPorURLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AdicionarItemPorURLResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdicionarItemPorFileStream">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="URLSite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Servidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Porta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeLista" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeArquivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ArquivoOrigemEmBytes" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeCampoChave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorCampoChave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MetaDados" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="CampoChaveEhBDC" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdicionarItemPorFileStreamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AdicionarItemPorFileStreamResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoverItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="URLSite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Servidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Porta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeLista" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeArquivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeCampoChave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorCampoChave" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CampoChaveEhBDC" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoverItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RemoverItemResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoverItemPorNome">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="URLSite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Servidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Porta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeLista" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeArquivo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoverItemPorNomeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RemoverItemPorNomeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizarMetaDados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="URLSite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Servidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Porta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeLista" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeCampoChave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorCampoChave" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CampoChaveEhBDC" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="MetaDados" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizarMetaDadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AtualizarMetaDadosResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizarMetaDadosPorNome">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="URLSite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Servidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Porta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeLista" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeArquivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MetaDados" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AtualizarMetaDadosPorNomeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AtualizarMetaDadosPorNomeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Listar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="URLSite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Servidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Porta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeLista" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeCampoPesquisa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorCampoPesquisa" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CampoChaveEhBDC" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarTodos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="URLSite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Servidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Porta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeLista" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarTodosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarTodosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="URLSite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Servidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Porta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeLista" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeArquivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeCampoChave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorCampoChave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetURLFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="URLSite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Servidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Porta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeLista" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeArquivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeCampoChave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ValorCampoChave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetURLFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetURLFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CarregarItensSoapIn">
+    <wsdl:part name="parameters" element="tns:CarregarItens" />
+  </wsdl:message>
+  <wsdl:message name="CarregarItensSoapOut">
+    <wsdl:part name="parameters" element="tns:CarregarItensResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdicionarItemPorURLSoapIn">
+    <wsdl:part name="parameters" element="tns:AdicionarItemPorURL" />
+  </wsdl:message>
+  <wsdl:message name="AdicionarItemPorURLSoapOut">
+    <wsdl:part name="parameters" element="tns:AdicionarItemPorURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdicionarItemPorFileStreamSoapIn">
+    <wsdl:part name="parameters" element="tns:AdicionarItemPorFileStream" />
+  </wsdl:message>
+  <wsdl:message name="AdicionarItemPorFileStreamSoapOut">
+    <wsdl:part name="parameters" element="tns:AdicionarItemPorFileStreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoverItemSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoverItem" />
+  </wsdl:message>
+  <wsdl:message name="RemoverItemSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoverItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoverItemPorNomeSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoverItemPorNome" />
+  </wsdl:message>
+  <wsdl:message name="RemoverItemPorNomeSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoverItemPorNomeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarMetaDadosSoapIn">
+    <wsdl:part name="parameters" element="tns:AtualizarMetaDados" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarMetaDadosSoapOut">
+    <wsdl:part name="parameters" element="tns:AtualizarMetaDadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarMetaDadosPorNomeSoapIn">
+    <wsdl:part name="parameters" element="tns:AtualizarMetaDadosPorNome" />
+  </wsdl:message>
+  <wsdl:message name="AtualizarMetaDadosPorNomeSoapOut">
+    <wsdl:part name="parameters" element="tns:AtualizarMetaDadosPorNomeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarSoapIn">
+    <wsdl:part name="parameters" element="tns:Listar" />
+  </wsdl:message>
+  <wsdl:message name="ListarSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarTodosSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarTodos" />
+  </wsdl:message>
+  <wsdl:message name="ListarTodosSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarTodosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFile" />
+  </wsdl:message>
+  <wsdl:message name="GetFileSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetURLFileSoapIn">
+    <wsdl:part name="parameters" element="tns:GetURLFile" />
+  </wsdl:message>
+  <wsdl:message name="GetURLFileSoapOut">
+    <wsdl:part name="parameters" element="tns:GetURLFileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SharePointWSSoap">
+    <wsdl:operation name="CarregarItens">
+      <wsdl:input message="tns:CarregarItensSoapIn" />
+      <wsdl:output message="tns:CarregarItensSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdicionarItemPorURL">
+      <wsdl:input message="tns:AdicionarItemPorURLSoapIn" />
+      <wsdl:output message="tns:AdicionarItemPorURLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdicionarItemPorFileStream">
+      <wsdl:input message="tns:AdicionarItemPorFileStreamSoapIn" />
+      <wsdl:output message="tns:AdicionarItemPorFileStreamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoverItem">
+      <wsdl:input message="tns:RemoverItemSoapIn" />
+      <wsdl:output message="tns:RemoverItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoverItemPorNome">
+      <wsdl:input message="tns:RemoverItemPorNomeSoapIn" />
+      <wsdl:output message="tns:RemoverItemPorNomeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarMetaDados">
+      <wsdl:input message="tns:AtualizarMetaDadosSoapIn" />
+      <wsdl:output message="tns:AtualizarMetaDadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarMetaDadosPorNome">
+      <wsdl:input message="tns:AtualizarMetaDadosPorNomeSoapIn" />
+      <wsdl:output message="tns:AtualizarMetaDadosPorNomeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Listar">
+      <wsdl:input message="tns:ListarSoapIn" />
+      <wsdl:output message="tns:ListarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodos">
+      <wsdl:input message="tns:ListarTodosSoapIn" />
+      <wsdl:output message="tns:ListarTodosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <wsdl:input message="tns:GetFileSoapIn" />
+      <wsdl:output message="tns:GetFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetURLFile">
+      <wsdl:input message="tns:GetURLFileSoapIn" />
+      <wsdl:output message="tns:GetURLFileSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SharePointWSSoap" type="tns:SharePointWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CarregarItens">
+      <soap:operation soapAction="http://tempuri.org/CarregarItens" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdicionarItemPorURL">
+      <soap:operation soapAction="http://tempuri.org/AdicionarItemPorURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdicionarItemPorFileStream">
+      <soap:operation soapAction="http://tempuri.org/AdicionarItemPorFileStream" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoverItem">
+      <soap:operation soapAction="http://tempuri.org/RemoverItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoverItemPorNome">
+      <soap:operation soapAction="http://tempuri.org/RemoverItemPorNome" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarMetaDados">
+      <soap:operation soapAction="http://tempuri.org/AtualizarMetaDados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarMetaDadosPorNome">
+      <soap:operation soapAction="http://tempuri.org/AtualizarMetaDadosPorNome" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listar">
+      <soap:operation soapAction="http://tempuri.org/Listar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodos">
+      <soap:operation soapAction="http://tempuri.org/ListarTodos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <soap:operation soapAction="http://tempuri.org/GetFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetURLFile">
+      <soap:operation soapAction="http://tempuri.org/GetURLFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SharePointWSSoap12" type="tns:SharePointWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CarregarItens">
+      <soap12:operation soapAction="http://tempuri.org/CarregarItens" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdicionarItemPorURL">
+      <soap12:operation soapAction="http://tempuri.org/AdicionarItemPorURL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdicionarItemPorFileStream">
+      <soap12:operation soapAction="http://tempuri.org/AdicionarItemPorFileStream" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoverItem">
+      <soap12:operation soapAction="http://tempuri.org/RemoverItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoverItemPorNome">
+      <soap12:operation soapAction="http://tempuri.org/RemoverItemPorNome" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarMetaDados">
+      <soap12:operation soapAction="http://tempuri.org/AtualizarMetaDados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AtualizarMetaDadosPorNome">
+      <soap12:operation soapAction="http://tempuri.org/AtualizarMetaDadosPorNome" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listar">
+      <soap12:operation soapAction="http://tempuri.org/Listar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodos">
+      <soap12:operation soapAction="http://tempuri.org/ListarTodos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <soap12:operation soapAction="http://tempuri.org/GetFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetURLFile">
+      <soap12:operation soapAction="http://tempuri.org/GetURLFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SharePointWS">
+    <wsdl:port name="SharePointWSSoap" binding="tns:SharePointWSSoap">
+      <soap:address location="http://10.0.1.39/SharePointWS/SharePointWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SharePointWSSoap12" binding="tns:SharePointWSSoap12">
+      <soap12:address location="http://10.0.1.39/SharePointWS/SharePointWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

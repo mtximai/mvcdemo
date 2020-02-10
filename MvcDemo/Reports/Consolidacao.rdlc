@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Rectangle Name="Rectangle1">
+        <KeepTogether>true</KeepTogether>
+        <Top>0.14111cm</Top>
+        <Left>0.0635cm</Left>
+        <Height>13.66132cm</Height>
+        <Width>16.21896cm</Width>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+    </ReportItems>
+    <Height>5.48958in</Height>
+    <Style />
+  </Body>
+  <Width>6.46875in</Width>
+  <Page>
+    <PageHeader>
+      <Height>2.16958cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Image Name="Image1">
+          <Source>Embedded</Source>
+          <Value>brasaomunicipio</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.3175cm</Top>
+          <Left>0.52599cm</Left>
+          <Height>1.5cm</Height>
+          <Width>1.5cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="Textbox1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>TRIBUNAL DE CONTAS DO</Value>
+                  <Style>
+                    <FontSize>6pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>MUNICÍPIO DE SÃO PAULO</Value>
+                  <Style>
+                    <FontSize>6pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>ISO 9001</Value>
+                  <Style>
+                    <FontSize>6pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.76412cm</Top>
+          <Left>2.11349cm</Left>
+          <Height>0.93804cm</Height>
+          <Width>3.00271cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox2">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Folha Nº _____</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Proc. Nº______</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0.44662cm</Top>
+          <Left>12.69683cm</Left>
+          <Height>1.20896cm</Height>
+          <Width>3.16146cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>4.65667cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox3">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Cód. 233 (Versão 01)</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox3</rd:DefaultName>
+          <Height>0.6cm</Height>
+          <Width>4.27271cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="TCMSPEntidadesApenados">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>f9d51b08-9d54-45cf-98e6-e53ca04f4603</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="MvcDemoDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>4de267d4-ec01-495b-95b1-2c7ab1b6641d</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>MvcDemoDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="codigo">
+          <DataField>codigo</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="descricao">
+          <DataField>descricao</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>MvcDemoDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\mti-projetos\MvcDemo\MvcDemo\Reports\DataSets\MvcDemoDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>dtProduto</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>dtProdutoTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="brasaomunicipio">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>0a521696-96d4-4c4a-9aad-a26838bf38c6</rd:ReportID>
+</Report>

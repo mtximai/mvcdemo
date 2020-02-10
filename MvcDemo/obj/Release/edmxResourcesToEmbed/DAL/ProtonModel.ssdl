@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProtonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EmailModelo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="descricao" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="corpo" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Thread" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Level" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Logger" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="User" Type="varchar" MaxLength="50" />
+    <Property Name="Message" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="Exception" Type="varchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="tDocumentos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Oficio" Type="varchar" MaxLength="12" />
+    <Property Name="IdTipoRemetente" Type="int" />
+    <Property Name="IdOrgao" Type="int" />
+    <Property Name="Remetente" Type="varchar" MaxLength="200" />
+    <Property Name="IdTipoProcessoExterno" Type="int" />
+    <Property Name="NumeroProcessoExterno" Type="varchar" MaxLength="20" />
+    <Property Name="TC" Type="varchar" MaxLength="12" />
+    <Property Name="Objeto" Type="varchar" MaxLength="100" />
+    <Property Name="Protocolo" Type="varchar" MaxLength="20" />
+    <Property Name="OficioTCM" Type="varchar" MaxLength="16" />
+    <Property Name="DataEntrada" Type="datetime" />
+    <Property Name="Observacoes" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="tTipoProcessoExterno">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TipoProcessoExterno" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mascara" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="tTipoRemetente">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="TipoRemetente" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="vwOrgao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Sigla" Type="varchar" MaxLength="25" />
+    <Property Name="Status" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="vwTCs">
+    <Key>
+      <PropertyRef Name="TC" />
+    </Key>
+    <Property Name="TC" Type="varchar" MaxLength="12" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tDocumentos_tTipoProcessoExterno">
+    <End Role="tTipoProcessoExterno" Type="Self.tTipoProcessoExterno" Multiplicity="0..1" />
+    <End Role="tDocumentos" Type="Self.tDocumentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tTipoProcessoExterno">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tDocumentos">
+        <PropertyRef Name="IdTipoProcessoExterno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tDocumentos_tTipoRemetente">
+    <End Role="tTipoRemetente" Type="Self.tTipoRemetente" Multiplicity="0..1" />
+    <End Role="tDocumentos" Type="Self.tDocumentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tTipoRemetente">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tDocumentos">
+        <PropertyRef Name="IdTipoRemetente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tDocumentos_vwOrgao">
+    <End Role="vwOrgao" Type="Self.vwOrgao" Multiplicity="0..1" />
+    <End Role="tDocumentos" Type="Self.tDocumentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vwOrgao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tDocumentos">
+        <PropertyRef Name="IdOrgao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ProtonModelStoreContainer">
+    <EntitySet Name="EmailModelo" EntityType="Self.EmailModelo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tDocumentos" EntityType="Self.tDocumentos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tTipoProcessoExterno" EntityType="Self.tTipoProcessoExterno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tTipoRemetente" EntityType="Self.tTipoRemetente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vwOrgao" EntityType="Self.vwOrgao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vwTCs" EntityType="Self.vwTCs" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tDocumentos_tTipoProcessoExterno" Association="Self.FK_tDocumentos_tTipoProcessoExterno">
+      <End Role="tTipoProcessoExterno" EntitySet="tTipoProcessoExterno" />
+      <End Role="tDocumentos" EntitySet="tDocumentos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tDocumentos_tTipoRemetente" Association="Self.FK_tDocumentos_tTipoRemetente">
+      <End Role="tTipoRemetente" EntitySet="tTipoRemetente" />
+      <End Role="tDocumentos" EntitySet="tDocumentos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tDocumentos_vwOrgao" Association="Self.FK_tDocumentos_vwOrgao">
+      <End Role="vwOrgao" EntitySet="vwOrgao" />
+      <End Role="tDocumentos" EntitySet="tDocumentos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

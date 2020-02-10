@@ -1,0 +1,1 @@
+INFO  2018-11-10 20:33:14,097 15752ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: nautilus, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:

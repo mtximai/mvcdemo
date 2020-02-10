@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="MvcDemo" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\mti-projetos\\MvcDemo\\MvcDemo\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\mti-projetos\\MvcDemo\\MvcDemo\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="Add write permission to App_Data Folder" description="Add write permission to App_Data folder" value="MvcDemo/App_Data" tags="Hidden">
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\mti-projetos\\MvcDemo\\MvcDemo\\obj\\Release\\Package\\PackageTmp\\App_Data$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=sql-desenvol;Initial Catalog=Proton;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\mti-projetos\\MvcDemo\\MvcDemo\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="MvcDemo.K19-Web.config Connection String" description="" value="MvcDemo.K19_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\mti-projetos\\MvcDemo\\MvcDemo\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MvcDemo.K19']/@connectionString" />
+  </parameter>
+  <parameter name="ProtonEntities-Web.config Connection String" description="" value="metadata=res://*/DAL.ProtonModel.csdl|res://*/DAL.ProtonModel.ssdl|res://*/DAL.ProtonModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=sql-desenvol;initial catalog=Proton;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\mti-projetos\\MvcDemo\\MvcDemo\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ProtonEntities']/@connectionString" />
+  </parameter>
+</parameters>

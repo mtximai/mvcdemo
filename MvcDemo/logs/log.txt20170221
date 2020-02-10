@@ -1,0 +1,9 @@
+INFO  2017-02-21 15:15:14,739 2499216ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-02-21 15:15:32,199 2516676ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: ckeTeste, ActionParameters:
+DEBUG 2017-02-21 15:15:32,204 2516681ms Log4NetConfig          ckeTeste           - xxx Resultado do Logon do Usuario {0}: {1} 
+ERROR 2017-02-21 15:15:32,208 2516685ms Log4NetConfig          ckeTeste           - xxx kjlsajflksjflkasjflka
+INFO  2017-02-21 15:22:12,204  3422ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: Index, ActionParameters:
+INFO  2017-02-21 15:22:19,134 10352ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: ckeTeste, ActionParameters:
+DEBUG 2017-02-21 15:22:19,139 10357ms Log4NetConfig          ckeTeste           - xxx Resultado do Logon do Usuario {0}: {1} 
+ERROR 2017-02-21 15:22:19,143 10361ms Log4NetConfig          ckeTeste           - xxx kjlsajflksjflkasjflka
+INFO  2017-02-21 15:22:24,432 15650ms Log4NetConfig          Log                - OnActionExecuting --> UserHost: ::1, ComputerName: DES-MAURO, Controller: MvcDemo.HomeController, Action: ckeTeste, ActionParameters:Parameter: vm - value: MvcDemo.ModeloCkeditor;

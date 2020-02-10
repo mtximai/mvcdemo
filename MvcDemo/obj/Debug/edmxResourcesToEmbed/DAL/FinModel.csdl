@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FinModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CadAcao">
+    <Key>
+      <PropertyRef Name="id_acao" />
+    </Key>
+    <Property Name="id_acao" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="nome_resumido" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="obs_especificacao" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="num_fatorcot" Type="Int32" Nullable="false" />
+    <Property Name="num_lotepdr" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CtbLan" Relationship="Self.FK_CtbLan_CadAcao" FromRole="CadAcao" ToRole="CtbLan" />
+  </EntityType>
+  <EntityType Name="CadConta">
+    <Key>
+      <PropertyRef Name="id_conta" />
+    </Key>
+    <Property Name="id_conta" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="descr" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ind_tipo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ind_natureza" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="CtbSaldoIni" Relationship="Self.FK_CadConta_CtbSaldoIni" FromRole="CadConta" ToRole="CtbSaldoIni" />
+    <NavigationProperty Name="CtbLan" Relationship="Self.FK_CtbLan_CodNeg_cr" FromRole="CadConta" ToRole="CtbLan" />
+    <NavigationProperty Name="CtbLan1" Relationship="Self.FK_CtbLan_CodNeg_db" FromRole="CadConta" ToRole="CtbLan" />
+  </EntityType>
+  <EntityType Name="CadCotaHist">
+    <Key>
+      <PropertyRef Name="id_Acao" />
+      <PropertyRef Name="dt_Pregao" />
+    </Key>
+    <Property Name="id_Acao" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="dt_Pregao" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="vl_Abertura" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="vl_Maximo" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="vl_Minimo" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="vl_Medio" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="vl_Ultimo" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="qt_Negocio" Type="Int32" Nullable="false" />
+    <Property Name="num_FatCot" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CadIndice">
+    <Key>
+      <PropertyRef Name="id_indice" />
+      <PropertyRef Name="dt_pregao" />
+    </Key>
+    <Property Name="id_indice" Type="Byte" Nullable="false" />
+    <Property Name="dt_pregao" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="qt_ponto" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CadParametro">
+    <Key>
+      <PropertyRef Name="id_Parametro" />
+    </Key>
+    <Property Name="id_Parametro" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="descr" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vl_str" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="vl_num" Type="Decimal" Precision="10" Scale="4" />
+  </EntityType>
+  <EntityType Name="CtbLan">
+    <Key>
+      <PropertyRef Name="id_lan" />
+    </Key>
+    <Property Name="id_lan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dt_lan" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="id_contadb" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="id_contacr" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="obs_historico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_acao" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="qt_acao" Type="Int32" />
+    <Property Name="vl_lan" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="CadAcao" Relationship="Self.FK_CtbLan_CadAcao" FromRole="CtbLan" ToRole="CadAcao" />
+    <NavigationProperty Name="CadConta" Relationship="Self.FK_CtbLan_CodNeg_cr" FromRole="CtbLan" ToRole="CadConta" />
+    <NavigationProperty Name="CadConta1" Relationship="Self.FK_CtbLan_CodNeg_db" FromRole="CtbLan" ToRole="CadConta" />
+  </EntityType>
+  <EntityType Name="CtbSaldoIni">
+    <Key>
+      <PropertyRef Name="dt_saldo" />
+      <PropertyRef Name="id_conta" />
+    </Key>
+    <Property Name="dt_saldo" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="id_conta" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="vl_db" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="vl_cr" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="CadConta" Relationship="Self.FK_CadConta_CtbSaldoIni" FromRole="CtbSaldoIni" ToRole="CadConta" />
+  </EntityType>
+  <Association Name="FK_CtbLan_CadAcao">
+    <End Role="CadAcao" Type="Self.CadAcao" Multiplicity="0..1" />
+    <End Role="CtbLan" Type="Self.CtbLan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CadAcao">
+        <PropertyRef Name="id_acao" />
+      </Principal>
+      <Dependent Role="CtbLan">
+        <PropertyRef Name="id_acao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CadConta_CtbSaldoIni">
+    <End Role="CadConta" Type="Self.CadConta" Multiplicity="1" />
+    <End Role="CtbSaldoIni" Type="Self.CtbSaldoIni" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CadConta">
+        <PropertyRef Name="id_conta" />
+      </Principal>
+      <Dependent Role="CtbSaldoIni">
+        <PropertyRef Name="id_conta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CtbLan_CodNeg_cr">
+    <End Role="CadConta" Type="Self.CadConta" Multiplicity="0..1" />
+    <End Role="CtbLan" Type="Self.CtbLan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CadConta">
+        <PropertyRef Name="id_conta" />
+      </Principal>
+      <Dependent Role="CtbLan">
+        <PropertyRef Name="id_contacr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CtbLan_CodNeg_db">
+    <End Role="CadConta" Type="Self.CadConta" Multiplicity="0..1" />
+    <End Role="CtbLan" Type="Self.CtbLan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CadConta">
+        <PropertyRef Name="id_conta" />
+      </Principal>
+      <Dependent Role="CtbLan">
+        <PropertyRef Name="id_contadb" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CadAcao" EntityType="Self.CadAcao" />
+    <EntitySet Name="CadConta" EntityType="Self.CadConta" />
+    <EntitySet Name="CadCotaHist" EntityType="Self.CadCotaHist" />
+    <EntitySet Name="CadIndice" EntityType="Self.CadIndice" />
+    <EntitySet Name="CadParametro" EntityType="Self.CadParametro" />
+    <EntitySet Name="CtbLan" EntityType="Self.CtbLan" />
+    <EntitySet Name="CtbSaldoIni" EntityType="Self.CtbSaldoIni" />
+    <AssociationSet Name="FK_CtbLan_CadAcao" Association="Self.FK_CtbLan_CadAcao">
+      <End Role="CadAcao" EntitySet="CadAcao" />
+      <End Role="CtbLan" EntitySet="CtbLan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CadConta_CtbSaldoIni" Association="Self.FK_CadConta_CtbSaldoIni">
+      <End Role="CadConta" EntitySet="CadConta" />
+      <End Role="CtbSaldoIni" EntitySet="CtbSaldoIni" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CtbLan_CodNeg_cr" Association="Self.FK_CtbLan_CodNeg_cr">
+      <End Role="CadConta" EntitySet="CadConta" />
+      <End Role="CtbLan" EntitySet="CtbLan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CtbLan_CodNeg_db" Association="Self.FK_CtbLan_CodNeg_db">
+      <End Role="CadConta" EntitySet="CadConta" />
+      <End Role="CtbLan" EntitySet="CtbLan" />
+    </AssociationSet>
+    <FunctionImport Name="up_CadAcao_Alterar">
+      <Parameter Name="id_acao" Mode="In" Type="String" />
+      <Parameter Name="nome_resumido" Mode="In" Type="String" />
+      <Parameter Name="obs_especificacao" Mode="In" Type="String" />
+      <Parameter Name="num_fatorcot" Mode="In" Type="Int32" />
+      <Parameter Name="num_lotepdr" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="up_CadAcao_Incluir">
+      <Parameter Name="id_acao" Mode="In" Type="String" />
+      <Parameter Name="nome_resumido" Mode="In" Type="String" />
+      <Parameter Name="obs_especificacao" Mode="In" Type="String" />
+      <Parameter Name="num_fatorcot" Mode="In" Type="Int32" />
+      <Parameter Name="num_lotepdr" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="up_CadAcao_ListarManutencao" ReturnType="Collection(FinModel.up_CadAcao_ListarManutencao_Result)" />
+    <FunctionImport Name="up_CadAcao_LocalizarId" ReturnType="Collection(FinModel.up_CadAcao_LocalizarId_Result)">
+      <Parameter Name="id_acao" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="up_CadConta_Alterar">
+      <Parameter Name="id_conta" Mode="In" Type="String" />
+      <Parameter Name="descr" Mode="In" Type="String" />
+      <Parameter Name="ind_tipo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="up_CadConta_Excluir">
+      <Parameter Name="id_conta" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="up_CadConta_Incluir">
+      <Parameter Name="id_conta" Mode="In" Type="String" />
+      <Parameter Name="descr" Mode="In" Type="String" />
+      <Parameter Name="ind_tipo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="up_CadConta_ListarManutencao" ReturnType="Collection(FinModel.up_CadConta_ListarManutencao_Result)" />
+    <FunctionImport Name="up_CadConta_ListarPickList" ReturnType="Collection(FinModel.up_CadConta_ListarPickList_Result)" />
+    <FunctionImport Name="up_CadConta_LocalizarId" ReturnType="Collection(FinModel.up_CadConta_LocalizarId_Result)">
+      <Parameter Name="id_conta" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="up_CadCotaHist_Incluir">
+      <Parameter Name="id_Acao" Mode="In" Type="String" />
+      <Parameter Name="dt_Pregao" Mode="In" Type="DateTime" />
+      <Parameter Name="vl_Abertura" Mode="In" Type="Decimal" />
+      <Parameter Name="vl_Maximo" Mode="In" Type="Decimal" />
+      <Parameter Name="vl_Minimo" Mode="In" Type="Decimal" />
+      <Parameter Name="vl_Medio" Mode="In" Type="Decimal" />
+      <Parameter Name="vl_Ultimo" Mode="In" Type="Decimal" />
+      <Parameter Name="qt_Negocio" Mode="In" Type="Int32" />
+      <Parameter Name="num_FatCot" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="up_CadCotaHist_LocalizarId" ReturnType="Collection(FinModel.up_CadCotaHist_LocalizarId_Result)">
+      <Parameter Name="id_Acao" Mode="In" Type="String" />
+      <Parameter Name="dt_Pregao" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="up_CadIndice_Atualizar">
+      <Parameter Name="id_indice" Mode="In" Type="Byte" />
+      <Parameter Name="dt_pregao" Mode="In" Type="DateTime" />
+      <Parameter Name="qt_ponto" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="up_CadIndice_ListarPorPeriodo" ReturnType="Collection(FinModel.up_CadIndice_ListarPorPeriodo_Result)">
+      <Parameter Name="id_indice" Mode="In" Type="Byte" />
+      <Parameter Name="dt_ini" Mode="In" Type="DateTime" />
+      <Parameter Name="dt_fim" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="up_CadParametro_Alterar">
+      <Parameter Name="id_Parametro" Mode="In" Type="String" />
+      <Parameter Name="descr" Mode="In" Type="String" />
+      <Parameter Name="vl_str" Mode="In" Type="String" />
+      <Parameter Name="vl_num" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="up_CadParametro_Excluir">
+      <Parameter Name="id_Parametro" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="up_CadParametro_Incluir">
+      <Parameter Name="id_Parametro" Mode="In" Type="String" />
+      <Parameter Name="descr" Mode="In" Type="String" />
+      <Parameter Name="vl_str" Mode="In" Type="String" />
+      <Parameter Name="vl_num" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="up_CadParametro_ListarManutencao" ReturnType="Collection(FinModel.up_CadParametro_ListarManutencao_Result)" />
+    <FunctionImport Name="up_CadParametro_LocalizarId" ReturnType="Collection(FinModel.up_CadParametro_LocalizarId_Result)">
+      <Parameter Name="id_parametro" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="up_CtbLan_Alterar">
+      <Parameter Name="id_lan" Mode="In" Type="Int32" />
+      <Parameter Name="dt_lan" Mode="In" Type="DateTime" />
+      <Parameter Name="id_contadb" Mode="In" Type="String" />
+      <Parameter Name="id_contacr" Mode="In" Type="String" />
+      <Parameter Name="obs_historico" Mode="In" Type="String" />
+      <Parameter Name="id_acao" Mode="In" Type="String" />
+      <Parameter Name="qt_acao" Mode="In" Type="Int32" />
+      <Parameter Name="vl_lan" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="up_CtbLan_Excluir">
+      <Parameter Name="id_lan" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="up_CtbLan_Incluir">
+      <Parameter Name="id_lan" Mode="In" Type="Int32" />
+      <Parameter Name="dt_lan" Mode="In" Type="DateTime" />
+      <Parameter Name="id_contadb" Mode="In" Type="String" />
+      <Parameter Name="id_contacr" Mode="In" Type="String" />
+      <Parameter Name="obs_historico" Mode="In" Type="String" />
+      <Parameter Name="id_acao" Mode="In" Type="String" />
+      <Parameter Name="qt_acao" Mode="In" Type="Int32" />
+      <Parameter Name="vl_lan" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="up_CtbLan_ListarAnalitico" ReturnType="Collection(FinModel.up_CtbLan_ListarAnalitico_Result)">
+      <Parameter Name="dt_ini" Mode="In" Type="DateTime" />
+      <Parameter Name="id_conta" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="up_CtbLan_ListarManutencao" ReturnType="Collection(FinModel.up_CtbLan_ListarManutencao_Result)">
+      <Parameter Name="dt_ini" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="up_CtbLan_LocalizarId" ReturnType="Collection(FinModel.up_CtbLan_LocalizarId_Result)">
+      <Parameter Name="id_lan" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="up_CtbSaldoIni_Encerrar">
+      <Parameter Name="dt_ini" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="up_InvCotacao_Incluir">
+      <Parameter Name="id_acao" Mode="In" Type="String" />
+      <Parameter Name="dt_pregao" Mode="In" Type="DateTime" />
+      <Parameter Name="qt_negocio" Mode="In" Type="Int32" />
+      <Parameter Name="num_fatorcot" Mode="In" Type="Int32" />
+      <Parameter Name="vl_max" Mode="In" Type="Decimal" />
+      <Parameter Name="vl_min" Mode="In" Type="Decimal" />
+      <Parameter Name="vl_ult" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="up_InvCotacao_ListarConsulta" ReturnType="Collection(FinModel.up_InvCotacao_ListarConsulta_Result)">
+      <Parameter Name="id_acao" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="up_InvCotacao_ListarOscilacao" ReturnType="Collection(FinModel.up_InvCotacao_ListarOscilacao_Result)" />
+    <FunctionImport Name="up_InvCotacao_ListarPorPeriodo" ReturnType="Collection(FinModel.up_InvCotacao_ListarPorPeriodo_Result)">
+      <Parameter Name="id_acao" Mode="In" Type="String" />
+      <Parameter Name="dt_ini" Mode="In" Type="DateTime" />
+      <Parameter Name="dt_fim" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="up_InvCotacao_LocalizarId" ReturnType="Collection(FinModel.up_InvCotacao_LocalizarId_Result)">
+      <Parameter Name="id_Acao" Mode="In" Type="String" />
+      <Parameter Name="dt_Pregao" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="up_InvCotacao_ObterSeExistePregao">
+      <Parameter Name="dt_Pregao" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="up_InvCotacao_ObterUltPregao" ReturnType="Collection(DateTime)">
+      <Parameter Name="dt_pregao" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="up_InvOrdem_Alterar">
+      <Parameter Name="id_lan" Mode="In" Type="Int32" />
+      <Parameter Name="dt_pregao" Mode="In" Type="DateTime" />
+      <Parameter Name="id_acao" Mode="In" Type="String" />
+      <Parameter Name="qt_ordem" Mode="In" Type="Decimal" />
+      <Parameter Name="vl_ordem" Mode="In" Type="Decimal" />
+      <Parameter Name="vl_custo" Mode="In" Type="Decimal" />
+      <Parameter Name="vl_lucro" Mode="In" Type="Decimal" />
+      <Parameter Name="ind_ope" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="up_InvOrdem_Excluir">
+      <Parameter Name="id_lan" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="up_InvOrdem_Incluir">
+      <Parameter Name="id_lan" Mode="In" Type="Int32" />
+      <Parameter Name="dt_pregao" Mode="In" Type="DateTime" />
+      <Parameter Name="id_acao" Mode="In" Type="String" />
+      <Parameter Name="qt_ordem" Mode="In" Type="Decimal" />
+      <Parameter Name="vl_ordem" Mode="In" Type="Decimal" />
+      <Parameter Name="vl_custo" Mode="In" Type="Decimal" />
+      <Parameter Name="vl_lucro" Mode="In" Type="Decimal" />
+      <Parameter Name="ind_ope" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="up_InvOrdem_ListarCarteira" ReturnType="Collection(FinModel.up_InvOrdem_ListarCarteira_Result)" />
+    <FunctionImport Name="up_InvOrdem_ListarCompra" ReturnType="Collection(FinModel.up_InvOrdem_ListarCompra_Result)">
+      <Parameter Name="id_acao" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="up_InvOrdem_ListarManutencao" ReturnType="Collection(FinModel.up_InvOrdem_ListarManutencao_Result)" />
+    <FunctionImport Name="up_InvOrdem_ListarPorData" ReturnType="Collection(FinModel.up_InvOrdem_ListarPorData_Result)">
+      <Parameter Name="dt_pregao" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="up_InvOrdem_LocalizarId" ReturnType="Collection(FinModel.up_InvOrdem_LocalizarId_Result)">
+      <Parameter Name="id_lan" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="zListarOrdem" ReturnType="Collection(FinModel.zListarOrdem_Result)" />
+    <FunctionImport Name="up_CtbLan_ListarBalancete">
+      <Parameter Name="dt_ini" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="up_CtbLan_ListarBalancete2" ReturnType="Collection(FinModel.up_CtbLan_ListarBalancete2_Result)">
+      <Parameter Name="dt_ini" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="up_CadAcao_ListarManutencao_Result">
+    <Property Type="String" Name="id_acao" Nullable="false" MaxLength="6" />
+    <Property Type="String" Name="nome_resumido" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="obs_especificacao" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="num_fatorcot" Nullable="false" />
+    <Property Type="Int32" Name="num_lotepdr" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="up_CadAcao_LocalizarId_Result">
+    <Property Type="String" Name="id_acao" Nullable="false" MaxLength="6" />
+    <Property Type="String" Name="nome_resumido" Nullable="true" MaxLength="12" />
+    <Property Type="String" Name="obs_especificacao" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="num_fatorcot" Nullable="false" />
+    <Property Type="Int32" Name="num_lotepdr" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="up_CadConta_ListarManutencao_Result">
+    <Property Type="String" Name="id_conta" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="descr" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="ind_tipo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ind_natureza" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="up_CadConta_ListarPickList_Result">
+    <Property Type="String" Name="id_conta" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="descr" Nullable="false" MaxLength="40" />
+  </ComplexType>
+  <ComplexType Name="up_CadConta_LocalizarId_Result">
+    <Property Type="String" Name="id_conta" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="descr" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="ind_tipo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ind_natureza" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="up_CadCotaHist_LocalizarId_Result">
+    <Property Type="String" Name="id_Acao" Nullable="false" MaxLength="6" />
+    <Property Type="DateTime" Name="dt_Pregao" Nullable="false" Precision="16" />
+    <Property Type="Decimal" Name="vl_Abertura" Nullable="false" Precision="19" />
+    <Property Type="Decimal" Name="vl_Maximo" Nullable="false" Precision="19" />
+    <Property Type="Decimal" Name="vl_Minimo" Nullable="false" Precision="19" />
+    <Property Type="Decimal" Name="vl_Medio" Nullable="false" Precision="19" />
+    <Property Type="Decimal" Name="vl_Ultimo" Nullable="false" Precision="19" />
+    <Property Type="Int32" Name="qt_Negocio" Nullable="false" />
+    <Property Type="Int32" Name="num_FatCot" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="up_CadIndice_ListarPorPeriodo_Result">
+    <Property Type="DateTime" Name="dt_pregao" Nullable="false" Precision="16" />
+    <Property Type="Decimal" Name="qt_ponto" Nullable="false" Precision="10" />
+  </ComplexType>
+  <ComplexType Name="up_CadParametro_ListarManutencao_Result">
+    <Property Type="String" Name="id_Parametro" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="descr" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="vl_str" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="vl_num" Nullable="true" Precision="10" />
+  </ComplexType>
+  <ComplexType Name="up_CadParametro_LocalizarId_Result">
+    <Property Type="String" Name="id_Parametro" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="descr" Nullable="false" MaxLength="40" />
+    <Property Type="String" Name="vl_str" Nullable="true" MaxLength="10" />
+    <Property Type="Decimal" Name="vl_num" Nullable="true" Precision="10" />
+  </ComplexType>
+  <ComplexType Name="up_CtbLan_ListarAnalitico_Result">
+    <Property Type="DateTime" Name="dt_lan" Nullable="false" Precision="16" />
+    <Property Type="String" Name="id_conta" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="obs_historico" Nullable="false" MaxLength="50" />
+    <Property Type="Decimal" Name="vl_db" Nullable="false" Precision="19" />
+    <Property Type="Decimal" Name="vl_cr" Nullable="false" Precision="19" />
+  </ComplexType>
+  <ComplexType Name="up_CtbLan_ListarManutencao_Result">
+    <Property Type="Int32" Name="id_lan" Nullable="false" />
+    <Property Type="DateTime" Name="dt_lan" Nullable="false" Precision="16" />
+    <Property Type="String" Name="id_contadb" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="id_contacr" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="obs_historico" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="id_acao" Nullable="true" MaxLength="6" />
+    <Property Type="Int32" Name="qt_acao" Nullable="true" />
+    <Property Type="Decimal" Name="vl_lan" Nullable="false" Precision="19" />
+  </ComplexType>
+  <ComplexType Name="up_CtbLan_LocalizarId_Result">
+    <Property Type="Int32" Name="id_lan" Nullable="false" />
+    <Property Type="DateTime" Name="dt_lan" Nullable="false" Precision="16" />
+    <Property Type="String" Name="id_contadb" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="id_contacr" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="obs_historico" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="id_acao" Nullable="true" MaxLength="6" />
+    <Property Type="Int32" Name="qt_acao" Nullable="true" />
+    <Property Type="Decimal" Name="vl_lan" Nullable="false" Precision="19" />
+  </ComplexType>
+  <ComplexType Name="up_InvCotacao_ListarConsulta_Result">
+    <Property Type="DateTime" Name="dt_pregao" Nullable="false" Precision="16" />
+    <Property Type="Decimal" Name="vl_max" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="vl_min" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="vl_ult" Nullable="false" Precision="10" />
+    <Property Type="Int32" Name="qt_negocio" Nullable="false" />
+    <Property Type="Decimal" Name="qt_ponto" Nullable="false" Precision="10" />
+  </ComplexType>
+  <ComplexType Name="up_InvCotacao_ListarOscilacao_Result">
+    <Property Type="String" Name="id_acao" Nullable="false" MaxLength="6" />
+    <Property Type="String" Name="nome_resumido" Nullable="true" MaxLength="23" />
+    <Property Type="Decimal" Name="vl_ult" Nullable="true" Precision="10" />
+    <Property Type="Decimal" Name="vl_ant" Nullable="true" Precision="10" />
+    <Property Type="Decimal" Name="vl_mes" Nullable="true" Precision="10" />
+    <Property Type="Decimal" Name="vl_ano" Nullable="true" Precision="10" />
+    <Property Type="Int32" Name="qt_negocio" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="up_InvCotacao_ListarPorPeriodo_Result">
+    <Property Type="DateTime" Name="dt_pregao" Nullable="false" Precision="16" />
+    <Property Type="Decimal" Name="vl_ult" Nullable="false" Precision="10" />
+    <Property Type="Int32" Name="qt_negocio" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="up_InvCotacao_LocalizarId_Result">
+    <Property Type="String" Name="id_acao" Nullable="false" MaxLength="6" />
+    <Property Type="DateTime" Name="dt_pregao" Nullable="false" Precision="16" />
+    <Property Type="Int32" Name="qt_negocio" Nullable="false" />
+    <Property Type="Int32" Name="num_fatorcot" Nullable="false" />
+    <Property Type="Decimal" Name="vl_max" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="vl_min" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="vl_ult" Nullable="false" Precision="10" />
+  </ComplexType>
+  <ComplexType Name="up_InvOrdem_ListarCarteira_Result">
+    <Property Type="String" Name="id_acao" Nullable="true" MaxLength="17" />
+    <Property Type="Decimal" Name="qt_acao" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="vl_compra" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="vl_custo" Nullable="true" Precision="19" />
+    <Property Type="Decimal" Name="vl_mercado" Nullable="true" Precision="19" />
+  </ComplexType>
+  <ComplexType Name="up_InvOrdem_ListarCompra_Result">
+    <Property Type="DateTime" Name="dt_pregao" Nullable="false" Precision="16" />
+    <Property Type="Decimal" Name="vl_unitario" Nullable="true" Precision="19" />
+  </ComplexType>
+  <ComplexType Name="up_InvOrdem_ListarManutencao_Result">
+    <Property Type="Int32" Name="id_lan" Nullable="false" />
+    <Property Type="String" Name="id_acao" Nullable="true" MaxLength="7" />
+    <Property Type="DateTime" Name="dt_pregao" Nullable="false" Precision="16" />
+    <Property Type="Decimal" Name="qt_ordem" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="vl_ordem" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="vl_custo" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="vl_lucro" Nullable="false" Precision="10" />
+    <Property Type="String" Name="ind_ope" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="up_InvOrdem_ListarPorData_Result">
+    <Property Type="Int32" Name="id_lan" Nullable="false" />
+    <Property Type="DateTime" Name="dt_pregao" Nullable="false" Precision="16" />
+    <Property Type="String" Name="id_acao" Nullable="true" MaxLength="6" />
+    <Property Type="Decimal" Name="qt_ordem" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="vl_ordem" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="vl_custo" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="vl_lucro" Nullable="false" Precision="10" />
+    <Property Type="String" Name="ind_ope" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="up_InvOrdem_LocalizarId_Result">
+    <Property Type="Int32" Name="id_lan" Nullable="false" />
+    <Property Type="DateTime" Name="dt_pregao" Nullable="false" Precision="16" />
+    <Property Type="String" Name="id_acao" Nullable="true" MaxLength="6" />
+    <Property Type="Decimal" Name="qt_ordem" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="vl_ordem" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="vl_custo" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="vl_lucro" Nullable="false" Precision="10" />
+    <Property Type="String" Name="ind_ope" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="zListarOrdem_Result">
+    <Property Type="Int32" Name="id_lan" Nullable="false" />
+    <Property Type="DateTime" Name="dt_pregao" Nullable="false" Precision="16" />
+    <Property Type="String" Name="id_acao" Nullable="true" MaxLength="6" />
+    <Property Type="Decimal" Name="qt_ordem" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="vl_ordem" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="vl_custo" Nullable="false" Precision="10" />
+    <Property Type="Decimal" Name="vl_lucro" Nullable="false" Precision="10" />
+    <Property Type="String" Name="ind_ope" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="up_CtbLan_ListarBalancete2_Result">
+    <Property Type="String" Name="id_conta" Nullable="false" MaxLength="5" />
+    <Property Type="String" Name="ind_tipo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="descr" Nullable="false" MaxLength="40" />
+    <Property Type="Decimal" Name="vl_ini" Nullable="false" Precision="19" />
+    <Property Type="Decimal" Name="vl_movdb" Nullable="false" Precision="19" />
+    <Property Type="Decimal" Name="vl_movcr" Nullable="false" Precision="19" />
+  </ComplexType>
+</Schema>

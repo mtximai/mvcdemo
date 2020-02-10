@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProtonModelStoreContainer" CdmEntityContainer="ProtonEntities">
+    <EntitySetMapping Name="tDocumentos">
+      <EntityTypeMapping TypeName="ProtonModel.tDocumentos">
+        <MappingFragment StoreEntitySet="tDocumentos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Oficio" ColumnName="Oficio" />
+          <ScalarProperty Name="IdTipoRemetente" ColumnName="IdTipoRemetente" />
+          <ScalarProperty Name="IdOrgao" ColumnName="IdOrgao" />
+          <ScalarProperty Name="Remetente" ColumnName="Remetente" />
+          <ScalarProperty Name="IdTipoProcessoExterno" ColumnName="IdTipoProcessoExterno" />
+          <ScalarProperty Name="NumeroProcessoExterno" ColumnName="NumeroProcessoExterno" />
+          <ScalarProperty Name="TC" ColumnName="TC" />
+          <ScalarProperty Name="Objeto" ColumnName="Objeto" />
+          <ScalarProperty Name="Protocolo" ColumnName="Protocolo" />
+          <ScalarProperty Name="OficioTCM" ColumnName="OficioTCM" />
+          <ScalarProperty Name="DataEntrada" ColumnName="DataEntrada" />
+          <ScalarProperty Name="Observacoes" ColumnName="Observacoes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tTipoProcessoExterno">
+      <EntityTypeMapping TypeName="ProtonModel.tTipoProcessoExterno">
+        <MappingFragment StoreEntitySet="tTipoProcessoExterno">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TipoProcessoExterno" ColumnName="TipoProcessoExterno" />
+          <ScalarProperty Name="Mascara" ColumnName="Mascara" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tTipoRemetente">
+      <EntityTypeMapping TypeName="ProtonModel.tTipoRemetente">
+        <MappingFragment StoreEntitySet="tTipoRemetente">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TipoRemetente" ColumnName="TipoRemetente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwOrgao">
+      <EntityTypeMapping TypeName="ProtonModel.vwOrgao">
+        <MappingFragment StoreEntitySet="vwOrgao">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwTCs">
+      <EntityTypeMapping TypeName="ProtonModel.vwTCs">
+        <MappingFragment StoreEntitySet="vwTCs">
+          <ScalarProperty Name="TC" ColumnName="TC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
